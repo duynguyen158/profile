@@ -1,2 +1,0 @@
-(this["webpackJsonpduynguyen158.github.io"]=this["webpackJsonpduynguyen158.github.io"]||[]).push([[0],{3:function(e,n,t){e.exports=t(9)},8:function(e,n,t){},9:function(e,n,t){"use strict";t.r(n);var u=t(0),o=t.n(u),r=t(2),l=t.n(r);t(8);var a=function(){return o.a.createElement("h1",null,"Hello, world")};l.a.render(o.a.createElement(o.a.StrictMode,null,o.a.createElement(a,null)),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.8badd698.chunk.js.map
