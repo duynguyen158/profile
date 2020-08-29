@@ -7,10 +7,6 @@ body {
     sans-serif;*/
 }
 
-.hero {
-  /*height: auto;*/
-}
-
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/hero.jpeg");
   /*height: 400px;*/
@@ -26,6 +22,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text a {
   color: white;
 }
 
