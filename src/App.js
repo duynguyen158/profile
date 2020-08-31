@@ -1,33 +1,30 @@
 import React from 'react';
 
 import Hero from './sections/Hero'; 
-import heroData from './data/hero.json';
+import heroData from './data/header/hero.json';
 
-import About from './sections/About';
+import Text from './sections/Text';
+import aboutData from './data/main/about.json';
+import farewellData from './data/main/farewell.json';
+
+import ChartPlaces from './sections/ChartPlaces';
 
 function App() {
-    const [ dims, setDims ] = React.useState({
-        height: window.innerHeight
-    });
-
-
-    function handleResize() {
-        setDims({
-            height: window.innerHeight
-        });
-    }
-
-    React.useEffect(() => {
-        window.addEventListener('resize', handleResize);
-        return _ => {
-            window.removeEventListener('resize', handleResize);
-        };
-    })
-
     return (
-        <div>
-            <Hero data={heroData} height={dims.height}/>
-            <About />
+        <div className="App">
+            <div className="header">
+                <Hero data={heroData} />
+            </div>
+            <div className="main">
+                <div>
+                    <Text data={aboutData} classNames={['about-me']} />
+                    <ChartPlaces classNames={['chart-places']}/>
+                    <Text data={farewellData} classNames={['about-me-2']} />
+                </div>
+                <div>
+
+                </div>
+            </div>
         </div>
     );
 }
