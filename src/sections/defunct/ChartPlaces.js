@@ -1,3 +1,6 @@
+// --------------- CURRENTLY NOT IN USE. TO USE, PULL OUT OF DEFUNCT FOLDER ---------------- //
+
+/*
 import React, { useRef, useState, useEffect } from 'react';
 import Caption from './Caption';
 import { csv } from 'd3-fetch';
@@ -38,19 +41,13 @@ function ChartPlaces(props) {
         const path = geoPath(projection);
 
         const svg = select(container.current)
-        svg
-            .append('path')
-            .attr('d', path(outline))
-            .attr('fill', 'none')
-            .attr('stroke', '#ccc')
-            .attr('stroke-width', 1);
 
         const g = svg.append('g');
         g.append('g')
             .selectAll('path')
             .data(countries.features)
             .join('path')
-            .attr('fill', '#ccc')
+            .attr('fill', '#d4c6b4')
             .attr('d', path);
         g.append("path")
             .datum(mesh(world, world.objects.countries, (a, b) => a !== b))
@@ -62,19 +59,19 @@ function ChartPlaces(props) {
         // When data is updated
         if (data.length !== 0) {
             g.append('g')
-            .selectAll('circle')
-            .data(data)
-            .join('circle')
-            .attr('transform', d => `translate(${projection([+d.long, +d.lat])})`)
-            .attr('r', 2.5)
-            .attr('fill', 'red')
-            .attr('fill-opacity', 0.8)
-            .append('title')
-            .text(d => `${d.city}, ${d.country}`);
+                .selectAll('circle')
+                .data(data)
+                .join('circle')
+                .attr('transform', d => `translate(${projection([+d.long, +d.lat])})`)
+                .attr('r', 2.5)
+                .attr('fill', '#d60404')
+                .attr('fill-opacity', 0.8)
+                .append('title')
+                .text(d => `${d.city}, ${d.country}`);
         }
     });
 
-    const classes = props.classNames.join(' ');
+    const classes = prop.classNames ? props.classNames.join(' ') : [];
     const style = {
         display: "block"
     };
@@ -83,7 +80,7 @@ function ChartPlaces(props) {
     // creates a container just big enough for our chart before it's rendered.  
     // RESULT: When the chart is actually rendered, components below it don't get awkwardly pushed down/up.
     return (
-        <div className={classes + ' wrap-wide'}>
+        <div className={'wrap-wide ' + classes}>
             <svg 
                 ref={container} 
                 viewBox={[0, 0, width, height]} 
@@ -95,3 +92,4 @@ function ChartPlaces(props) {
 }
 
 export default ChartPlaces;
+*/

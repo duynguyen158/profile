@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-function Text(props) {
-    const paragraphs = props.data.map(d => 
+function Text({ data, classNames }) {
+    const paragraphs = data.map(d => 
         <ReactMarkdown 
             source={d.text} 
             key={d.id} 
-            renderers={{link: props => <a href={props.href} target="_blank" rel="noopener noreferrer">{props.children}</a>}}
+            renderers={{
+                link: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+            }}
         />
     );
-    const classes = props.classNames.join(" ");
+    const classes = classNames ? `${classNames.join(' ')} ` : '';
     return (
-        <div className={classes + ' wrap'}>
+        <div className={classes + 'wrap'}>
             {paragraphs}
         </div>
     );

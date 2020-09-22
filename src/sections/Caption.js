@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Caption(props) {
+function Caption({ text }) {
     return (
         <div className="caption">
-            <small>{props.text}</small>
+            <small>{text}</small>
         </div>
     );
 }

@@ -7,7 +7,10 @@ import Text from './sections/Text';
 import aboutData from './data/main/about.json';
 import farewellData from './data/main/farewell.json';
 
-import ChartPlaces from './sections/ChartPlaces';
+//import ChartPlaces from './sections/ChartPlaces';
+//import RadioFancy from './sections/RadioFancy';
+import Portfolio from './sections/Portfolio';
+import portfolioData from './data/main/portfolio.json';
 
 function App() {
     return (
@@ -18,11 +21,10 @@ function App() {
             <div className="main">
                 <div>
                     <Text data={aboutData} classNames={['about-me']} />
-                    <ChartPlaces classNames={['chart-places']}/>
-                    <Text data={farewellData} classNames={['about-me-2']} />
+                    <Text data={farewellData} />
                 </div>
                 <div>
-
+                    <Portfolio data={portfolioData} />
                 </div>
             </div>
         </div>
@@ -30,3 +32,4 @@ function App() {
 }
 
 export default App;
+// <RadioFancy data={portfolioSelectorData} defaultValue="viz" />

@@ -1,7 +1,25 @@
+@font-face {
+  font-family: 'Kenfolg';
+  src: url('fonts/MADE Kenfolg PERSONAL USE.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Argesta';
+  src: url('fonts/argestadisplay-regular-webfont.eot');
+  src: url('fonts/argestadisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/argestadisplay-regular-webfont.woff2') format('woff2'),
+       url('fonts/argestadisplay-regular-webfont.woff') format('woff'),
+       url('fonts/argestadisplay-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /*--serif: "Newzald", "Georgia", "serif";*/
-  --serif: 'Lora', serif;
-	--base: 1.188rem;
+  --serif: 'Belda', serif;
+	--base: 1.07rem;
 	--jumbo: 1.80225rem;
 	--h1: 1.602rem;
 	--h2: 1.424rem;
@@ -19,7 +37,7 @@
 }
 
 html {
-  /*background-color: var(--white);*/
+  background-color: #e3e1e7;
 }
 
 body {
@@ -33,7 +51,7 @@ body {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/hero.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/images/hero.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,16 +67,29 @@ body {
   color: var(--white);
 }
 
+.hero-text h1 {
+  font-family: 'Kenfolg', serif;
+  font-weight: 600;
+}
+
 .hero-text a {
   color: var(--white);
+  font-family: 'Argesta', serif;
 }
 
 .main {
   padding: 0 1em;
   font-size: var(--base);
-  color: var(--black);
-  /*font-family: var(--serif);*/
+  font-family: 'Argesta', serif;
   line-height: 1.35;
+}
+
+.main a:link {
+  color: var(--black);
+}
+
+.main a:visited {
+  color: #666e8f;
 }
 
 .wrap {

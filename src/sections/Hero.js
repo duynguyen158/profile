@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-function Hero(props) {
-    const [ dims, setDims ] = useState({ 
-            height: window.innerHeight 
-    });
+function Hero({ data }) {
+    const [ height, setHeight ] = useState(window.innerHeight);
     // As long as the list of dependencies included in useEffect() is empty, 
     // declaring handleResize() outside of useEffect() is safe.
     function handleResize() {
-        const height = window.innerHeight;
-        if (height !== dims.height) {
-            setDims({ height });
+        const newHeight = window.innerHeight;
+        if (newHeight !== height) {
+            setHeight(newHeight);
         }
     }
     // NO dependency array so that it acts as both componentDidMount() and
@@ -20,12 +18,12 @@ function Hero(props) {
             window.removeEventListener('resize', handleResize);
         };
     });
-    const style = { height: dims.height };
+    const style = { height };
 
     return (
         <div className="hero">
             <div className="hero-image" style={style}>
-                <HeroText data={props.data} />
+                <HeroText data={data} />
             </div>
         </div>
     );
@@ -33,8 +31,7 @@ function Hero(props) {
 
 export default Hero;
 
-function HeroText(props) {
-    const data = props.data;
+function HeroText({ data }) {
     const email = <a href={"mailto:" + data.email}>Email</a>;
     const links = Object
         .entries(data.links)
