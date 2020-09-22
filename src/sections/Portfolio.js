@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 //import Paper from '@material-ui/core/Paper'
+import Visualizations from './Visualizations';
+import Articles from './Articles';
 import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab'
+import Tab from '@material-ui/core/Tab';
 
 function Portfolio({ data }) {
     // Select first category by default
@@ -38,22 +40,6 @@ function TabPanel({ value, index, data }) {
     return (
         <div hidden={value !== index}>
             <Component data={data}/>
-        </div>
-    );
-}
-
-function Visualizations({ data }) {
-    return (
-        <div>
-            {data.label}
-        </div>
-    );
-}
-
-function Articles({ data }) {
-    return (
-        <div>
-            {data.label}
         </div>
     );
 }
