@@ -1,10 +1,47 @@
 [
     {
-        "value": "viz",
-        "label": "Visualizations"
+        "id": "viz",
+        "label": "Visualizations",
+        "examples": [
+            {
+                "file": "covid_us_trajectory",
+                "title": "ProPublica's COVID Arrow Map",
+                "date": "8/3/20"
+            },
+            {
+                "file": "scotus",
+                "title": "A Timeline of S.C.O.T.U.S. Justices",
+                "date": "7/25/20"
+            },
+            {
+                "file": "wapo_police_shootings",
+                "title": "Fatal Police Shootings in the U.S.",
+                "date": "6/3/20"
+            },
+            {
+                "file": "nys_coi",
+                "title": "Child Opportunity Index: N.Y.C. & Long Island",
+                "date": "4/15/20"
+            },
+            {
+                "file": "covid_vn_cases",
+                "title": "Tracking COVID Cases in Vietnam",
+                "date": "4/12/20"
+            },
+            {
+                "file": "line_chart_matrix",
+                "title": "House Prices, U.S. v. Elsewhere",
+                "date": "2/16/20"
+            },
+            {
+                "file": "forecast538_dem20_primary",
+                "title": "FiveThirtyEight's 2020 Primary Forecast Methodology",
+                "date": "1/24/20"
+            }
+        ]
     },
     {
-        "value": "clips",
+        "id": "clips",
         "label": "Articles"
     }
 ]
