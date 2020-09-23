@@ -7,10 +7,10 @@ import Text from './sections/Text';
 import aboutData from './data/main/about.json';
 import farewellData from './data/main/farewell.json';
 
-//import ChartPlaces from './sections/ChartPlaces';
-//import RadioFancy from './sections/RadioFancy';
 import Portfolio from './sections/Portfolio';
 import portfolioData from './data/main/portfolio.json';
+
+import footerData from './data/footer/footer.json';
 
 function App() {
     return (
@@ -26,6 +26,9 @@ function App() {
                 <div className="portfolio">
                     <Portfolio data={portfolioData} />
                 </div>
+            </div>
+            <div className="footer">
+                <Text data={footerData} />
             </div>
         </div>
     );

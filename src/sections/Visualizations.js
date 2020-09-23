@@ -17,12 +17,13 @@ export default Visualizations;
 function Cell({ data }) {
     const [ url, setUrl ] = useState(null);
 
+    // Fetch video
     import(`../media/videos/${data.id}.mp4`).then(video => {
         setUrl(video.default);
     });
 
     const style = {
-        width: '100%',
+        width: '100%'
     };
     const video = (
         <video 

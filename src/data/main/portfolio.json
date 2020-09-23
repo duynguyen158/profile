@@ -94,7 +94,7 @@
                 "title": "House Prices, U.S. v. Elsewhere",
                 "date": "2/16/20",
                 "tech": "🕹 D3.js",
-                "publication": "Blocks",
+                "publication": "Bl.ocks",
                 "byline": "💪 Responsible for everything",
                 "url": "https://bl.ocks.org/duynguyen158/6b753b933e63033ad6ae7fcddd28ca2e",
                 "description": [
@@ -124,6 +124,28 @@
     },
     {
         "id": "clips",
-        "label": "Articles"
+        "label": "Articles",
+        "examples": [
+            {
+                "id": "uh-minimalist",
+                "title": "",
+                "date": "",
+                "publication": "",
+                "url": "",
+                "description": [
+
+                ]
+            },
+            {
+                "id": "uh-sneakers",
+                "title": "",
+                "date": "",
+                "publication": "",
+                "url": "",
+                "description": [
+                    
+                ]
+            }
+        ]
     }
 ]

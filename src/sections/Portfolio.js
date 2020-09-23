@@ -19,13 +19,18 @@ function Portfolio({ data }) {
     const tabPanels = data.map((d, i) => 
         <TabPanel key={i} value={currentIndex} index={i} data={d} />
     );
+    const style = {
+
+    };
 
     return (
         //<Paper>
         <div className="wrap-wide">
-            <Tabs value={currentIndex} onChange={handleChange} centered>
-                {tabs}
-            </Tabs>
+            <div class="tabs" style={style}>
+                <Tabs value={currentIndex} onChange={handleChange} centered>
+                    {tabs}
+                </Tabs>
+            </div>
             {tabPanels}
         </div>
         //</Paper>
