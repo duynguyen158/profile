@@ -22,7 +22,7 @@ function Portfolio({ data }) {
 
     return (
         //<Paper>
-        <div>
+        <div className="wrap-wide">
             <Tabs value={currentIndex} onChange={handleChange} centered>
                 {tabs}
             </Tabs>
@@ -46,6 +46,6 @@ function TabPanel({ value, index, data }) {
 
 // ------------HELPERS-------------
 function getComponent(label) {
-    if (label === "Visualizations") return Visualizations;
+    if (label === 'Visualizations') return Visualizations;
     return Articles;
 }

@@ -4,39 +4,121 @@
         "label": "Visualizations",
         "examples": [
             {
-                "file": "covid_us_trajectory",
+                "id": "covid_us_trajectory",
                 "title": "ProPublica's COVID Arrow Map",
-                "date": "8/3/20"
-            },
+                "date": "8/3/20",
+                "publication": "Observable",
+                "tech": "🕹 D3.js, SimpleStatistics.js",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/propublicas-covid-arrow-map",
+                "description": [
+                    {
+                        "text": "[ProPublica's](https://projects.propublica.org/reopening-america/) map of COVID-19 trajectory across U.S. states, recreated."
+                    },
+                    {
+                        "text": "To calculate the trend line in each state, I applied linear regression on daily numbers of positive tests per 100,000 people, smoothened into seven-day moving averages, for the past 14 days."
+                    }
+                ]
+            }, 
             {
-                "file": "scotus",
+                "id": "scotus",
                 "title": "A Timeline of S.C.O.T.U.S. Justices",
-                "date": "7/25/20"
+                "date": "7/25/20",
+                "publication": "Observable",
+                "tech": "🕹 D3.js",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/a-timeline-of-scotus-justices",
+                "description": [
+                    {
+                        "text": "A zoomable timeline of all justices in the U.S. Supreme Court, classified by seat number."
+                    }
+                ]
             },
             {
-                "file": "wapo_police_shootings",
+                "id": "wapo_police_shootings",
                 "title": "Fatal Police Shootings in the U.S.",
-                "date": "6/3/20"
+                "date": "6/3/20",
+                "publication": "Observable",
+                "tech":"🕹 D3.js, MapboxGL.js",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/fatal-police-shootings-in-the-u-s",
+                "description": [
+                    {
+                        "text": "An animated version of [The Washington Post's](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/#js-map) map of all fatal shootings by on-duty police officers from Jan. 1, 2015. Orange flashes indicate new shootings each day."
+                    },
+                    {
+                        "text": "This was my first attempt at Mapbox, which I absolutely loved!"
+                    }
+                ],
+                "extraStyle" : {
+                    "borderRadius": "2px",
+                    "boxShadow": "0px 0px 4px 0px black" 
+                }
             },
             {
-                "file": "nys_coi",
+                "id": "nys_coi",
                 "title": "Child Opportunity Index: N.Y.C. & Long Island",
-                "date": "4/15/20"
+                "date": "4/15/20",
+                "publication": "Observable",
+                "tech": "🕹 D3.js",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/nyc-li-2015-child-opportunity-index/2",
+                "description": [
+                    {
+                        "text": "A bubble-flow chart tracking the distribution of child-opportunity scores across census tracts in New York City and Long Island."
+                    },
+                    {
+                        "text": "The [Child Opportunity Index](http://diversitydatakids.org/) measures conditions crucial to child development in the U.S. For this visualization, I used its 2015 scores."
+                    }
+                ]
             },
             {
-                "file": "covid_vn_cases",
+                "id": "covid_vn_cases",
                 "title": "Tracking COVID Cases in Vietnam",
-                "date": "4/12/20"
+                "date": "4/12/20",
+                "publication": "Observable",
+                "tech": "🕹 D3.js, Google Sheets",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/tracking-covid-19-cases-in-vietnam",
+                "description": [
+                    {
+                        "text": "One of the few data visualizations that specifically tracks COVID-19's progress in Vietnam, including a bubble chart and a heat map."
+                    },
+                    {
+                        "text": "This one was a doozy! Before Vietnam's Minstry of Health release its data of all confirmed cases, I had to compile mine from scratch by going through a *lot* of newspaper articles. Then, from that dataset, using Google Sheets, I created pivot tables detailing daily cases, recoveries and deaths by province, then published them as CSVs that I fetched with D3."
+                    }
+                ]
             },
             {
-                "file": "line_chart_matrix",
+                "id": "line_chart_matrix",
                 "title": "House Prices, U.S. v. Elsewhere",
-                "date": "2/16/20"
+                "date": "2/16/20",
+                "tech": "🕹 D3.js",
+                "publication": "Blocks",
+                "byline": "💪 Responsible for everything",
+                "url": "https://bl.ocks.org/duynguyen158/6b753b933e63033ad6ae7fcddd28ca2e",
+                "description": [
+                    {
+                        "text": "A line-chart matrix showing quarterly house prices, index by the first quarter of 1975, of some non-G7 countries (green) and the U.S. (orange)."
+                    },
+                    {
+                        "text": "I made this one as a tribute to FiveThirtyEight's [matrix visualization](https://projects.fivethirtyeight.com/trump-approval-ratings/) of Donald Trump's approval ratings compared to other presidents', using `d3.select` with `d3.cross`."
+                    }
+                ]
             },
             {
-                "file": "forecast538_dem20_primary",
+                "id": "forecast538_dem20_primary",
                 "title": "FiveThirtyEight's 2020 Primary Forecast Methodology",
-                "date": "1/24/20"
+                "date": "1/24/20",
+                "tech": "🕹 Elk.js",
+                "publication": "Observable",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/fivethirtyeights-2020-primary-forecast-methodology-visu",
+                "description": [
+                    {
+                        "text": "A flow chart outlining the process of creating Nate Silver's [forecast](https://projects.fivethirtyeight.com/2020-primary-forecast/) for the 2020 Democratic primary, part of the 2020 presidential election in the U.S."
+                    }
+                ]
             }
         ]
     },

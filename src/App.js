@@ -19,11 +19,11 @@ function App() {
                 <Hero data={heroData} />
             </div>
             <div className="main">
-                <div>
+                <div className="about wrap">
                     <Text data={aboutData} classNames={['about-me']} />
-                    <Text data={farewellData} />
+                    <Text data={farewellData} classNames={['farewell']} />
                 </div>
-                <div>
+                <div className="portfolio">
                     <Portfolio data={portfolioData} />
                 </div>
             </div>

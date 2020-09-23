@@ -28,6 +28,7 @@
   --small: 0.889em;
   --white: #f2e9e4;
   --black: #22223b;
+  --light-grey: #e2e2e2;
 	/*--link: #1083cf;
 	--grey: #8c8c8c;
 	--light-blue: #eaf5ff;
@@ -36,12 +37,9 @@
 	--light-grey: #e2e2e2;*/
 }
 
-html {
-  background-color: #e3e1e7;
-}
-
 body {
   margin: 0;
+  /*background-color: #e3e1e7;*/
   /*font-family: var(--serif);*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,6 +47,19 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;*/
 }
+
+h1, h3 {
+  font-family: 'Kenfolg', serif;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 400;
+}
+
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/images/hero.jpeg");
@@ -67,18 +78,16 @@ body {
   color: var(--white);
 }
 
-.hero-text h1 {
-  font-family: 'Kenfolg', serif;
-  font-weight: 600;
-}
-
 .hero-text a {
   color: var(--white);
   font-family: 'Argesta', serif;
 }
 
+.hero-text a:not(:hover) {
+  text-decoration: none;
+}
+
 .main {
-  padding: 0 1em;
   font-size: var(--base);
   font-family: 'Argesta', serif;
   line-height: 1.35;
@@ -88,9 +97,9 @@ body {
   color: var(--black);
 }
 
-.main a:visited {
+/*.main a:visited {
   color: #666e8f;
-}
+}*/
 
 .wrap {
   max-width: 650px;
@@ -104,18 +113,42 @@ body {
   margin: 0 auto;
 }
 
-.about-me {
+.about, .portfolio {
+  padding: 0 1em;
   margin-top: 3em;
 }
 
-.chart-places, .about-me-2 {
-  margin-top: 1.5em;
+.cell {
+  margin-top: 2em;
 }
 
-.caption {
-  text-align: center;
+.cell:not(:last-child) {
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.publication {
   font-style: italic;
-  font-size: var(--small);
+}
+
+.info h3, .publication {
+  margin: 0;
+}
+
+.info a:not(:hover) {
+  text-decoration: none;
+}
+ 
+.info, .description {
+  max-width: 650px;
+}
+
+.credits {
+  margin-top: 1em;
+}
+
+.credits * {
+  margin: 0;
 }
 
 /*code {
