@@ -7,7 +7,8 @@ function Text({ data, classNames }) {
             source={d.text} 
             key={d.id ? d.id : i} 
             renderers={{
-                link: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+                link: Link,
+                paragraph: Paragraph
             }}
         />
     );
@@ -20,3 +21,19 @@ function Text({ data, classNames }) {
 }
 
 export default Text;
+
+function Link({ href, children }) {
+    return (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+            {children}
+        </a>
+    );
+}
+
+function Paragraph({ children }) {
+    return (
+        <p className="markdown">
+            {children}
+        </p>
+    );
+}

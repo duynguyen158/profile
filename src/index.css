@@ -60,7 +60,6 @@ h3 {
   font-weight: 400;
 }
 
-
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/images/hero.jpeg");
   background-position: center;
@@ -87,19 +86,19 @@ h3 {
   text-decoration: none;
 }
 
+.markdown a:link {
+  color: var(--black);
+}
+
+.markdown a:visited {
+  color: #666e8f;
+}
+
 .main {
   font-size: var(--base);
   font-family: 'Argesta', serif;
   line-height: 1.35;
 }
-
-.main a:link {
-  color: var(--black);
-}
-
-/*.main a:visited {
-  color: #666e8f;
-}*/
 
 .wrap {
   max-width: 650px;
@@ -133,6 +132,10 @@ h3 {
 
 .info h3, .publication {
   margin: 0;
+}
+
+.info a {
+  color: var(--black)
 }
 
 .info a:not(:hover) {
