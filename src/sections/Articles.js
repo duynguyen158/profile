@@ -1,9 +1,10 @@
 import React from 'react';
+//import 
 
 function Articles({ data }) {
     return (
         <div>
-            {data.label}
+            TBD
         </div>
     );
 } 

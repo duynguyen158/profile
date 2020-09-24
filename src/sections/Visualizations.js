@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { utcParse } from 'd3-time-format';
 import Text from './Text';
+import linkWrap from './utilities/linkWrap';
 
 function Visualizations({ data }) {
     const examples = data.examples;
     const cells = examples.map((d, i)=> <Cell key={i} data={d} />);
     return (
-        <div>
+        <div className="wrap-wide">
             {cells}
         </div>
     );
@@ -15,55 +16,49 @@ function Visualizations({ data }) {
 export default Visualizations;
 
 function Cell({ data }) {
-    const [ url, setUrl ] = useState(null);
+    // Hook to store and get URL of thumbnail
+    const [ thumbnailUrl, setThumbnailUrl ] = useState(null);
 
-    // Fetch video
-    import(`../media/videos/${data.id}.mp4`).then(video => {
-        setUrl(video.default);
+    const {
+        id, title, date, publication, 
+        tech, byline, url, description, extraStyle
+    } = data;
+
+    // Fetch thumbnail video
+    import(`../media/videos/${id}.mp4`).then(video => {
+        setThumbnailUrl(video.default);
     });
 
-    const style = {
-        width: '100%'
-    };
     const video = (
         <video 
             autoPlay={true} 
             loop={true} 
             muted={true} 
-            src={url} 
-            style={Object.assign(style, data.extraStyle)}
+            src={thumbnailUrl} 
+            width="100%"
+            style={extraStyle}
         ></video>
     );
 
-    //console.log("rendered");
-
     return (
-        <div id={data.id} className="cell">
+        <div id={id} className="cell">
             <div className="info">
-                {linkWrap(<h3>{data.title}</h3>, data.url)}
-                <p className="publication">{data.publication}</p>
-                <small className="time">{toDateString(parseDate(data.date))}</small>
+                {linkWrap(<h3>{title}</h3>, url)}
+                <p className="publication">{publication}</p>
+                <small className="time">{toDateString(parseDate(date))}</small>
                 <div className="credits">
-                    <small className="tech">{data.tech}</small>
+                    <small className="tech">{tech}</small>
                     <br></br>
-                    <small className="byline">{data.byline}</small>
+                    <small className="byline">{byline}</small>
                 </div>
             </div>
-            <Text data={data.description} classNames={['description']} />
-            {linkWrap(video, data.url)}
+            <Text data={description} classNames={['description']} />
+            {linkWrap(video, url)}
         </div>
     );
 };
 
 // ------------HELPERS-------------
-function linkWrap(Component, url) {
-    return (
-        <a href={url} target="_blank" rel="noopener noreferrer">
-            {Component}
-        </a>
-    );
-}
-
 const parseDate = utcParse('%m/%d/%y');
 
 function toDateString(date) {

@@ -5,6 +5,7 @@
         "examples": [
             {
                 "id": "covid_us_trajectory",
+                "thumbnailType": "mp4",
                 "title": "ProPublica's COVID Arrow Map",
                 "date": "8/3/20",
                 "publication": "Observable",
@@ -22,6 +23,7 @@
             }, 
             {
                 "id": "scotus",
+                "thumbnailType": "mp4",
                 "title": "A Timeline of S.C.O.T.U.S. Justices",
                 "date": "7/25/20",
                 "publication": "Observable",
@@ -36,6 +38,7 @@
             },
             {
                 "id": "wapo_police_shootings",
+                "thumbnailType": "mp4",
                 "title": "Fatal Police Shootings in the U.S.",
                 "date": "6/3/20",
                 "publication": "Observable",
@@ -57,6 +60,7 @@
             },
             {
                 "id": "nys_coi",
+                "thumbnailType": "mp4",
                 "title": "Child Opportunity Index: N.Y.C. & Long Island",
                 "date": "4/15/20",
                 "publication": "Observable",
@@ -74,6 +78,7 @@
             },
             {
                 "id": "covid_vn_cases",
+                "thumbnailType": "mp4",
                 "title": "Tracking COVID Cases in Vietnam",
                 "date": "4/12/20",
                 "publication": "Observable",
@@ -91,6 +96,7 @@
             },
             {
                 "id": "line_chart_matrix",
+                "thumbnailType": "mp4",
                 "title": "House Prices, U.S. v. Elsewhere",
                 "date": "2/16/20",
                 "tech": "🕹 D3.js",
@@ -108,6 +114,7 @@
             },
             {
                 "id": "forecast538_dem20_primary",
+                "thumbnailType": "mp4",
                 "title": "FiveThirtyEight's 2020 Primary Forecast Methodology",
                 "date": "1/24/20",
                 "tech": "🕹 Elk.js",
@@ -128,22 +135,28 @@
         "examples": [
             {
                 "id": "uh-minimalist",
-                "title": "",
-                "date": "",
-                "publication": "",
-                "url": "",
+                "title": "The Pink, Minimalist Aesthetic Enticing Hanoi's Millennials",
+                "date": "4/4/19",
+                "publication": "Urbanist Hanoi",
+                "url": "https://urbanisthanoi.com/hanoi-culture/14866-the-pink,-minimalist-aesthetic-enticing-hanoi-s-millennials",
                 "description": [
-
+                    {
+                        "id": "sublede",
+                        "text": "At the intersection between Hang Bong and Phung Hung streets, there is a bakery whose lavender armchairs look as if they are made from giant ladyfingers. It’s called Baked by Julie and, since opening last August, has constantly appeared on Instagram thanks to its predominantly pink palette, which is featured on its velour, mitten-shaped armchairs, ceramic teapots and garlanded entrance."
+                    }
                 ]
             },
             {
                 "id": "uh-sneakers",
-                "title": "",
-                "date": "",
-                "publication": "",
-                "url": "",
+                "title": "For Vietnam's Millennials, Sneakers Reflect American Ideals, Self-Expression and Nostalgia",
+                "date": "9/11/18",
+                "publication": "Urbanist Hanoi",
+                "url": "https://urbanisthanoi.com/hanoi-culture/13662-for-vietnam-s-millennials,-sneakers-reflect-american-ideals,-self-expression-and-nostalgia",
                 "description": [
-                    
+                    {
+                        "id": "sublede",
+                        "text": "My memories of sneakers date back to when I was halfway through 7th grade, when a pair of Chuck Taylor All Star 70’s was given to me by my parents to commemorate my good end-of-semester results. The shoes felt awkward, but the sensation of having the same sneakers that the cool kids were wearing was comparable to ecstasy."
+                    }
                 ]
             }
         ]

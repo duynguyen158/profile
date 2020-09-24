@@ -25,8 +25,8 @@ function Portfolio({ data }) {
 
     return (
         //<Paper>
-        <div className="wrap-wide">
-            <div class="tabs" style={style}>
+        <div>
+            <div className="tabs" style={style}>
                 <Tabs value={currentIndex} onChange={handleChange} centered>
                     {tabs}
                 </Tabs>
