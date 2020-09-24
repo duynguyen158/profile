@@ -111,11 +111,8 @@ code {
   margin: 0 auto;
 }
 
-.about, .portfolio {
-  padding: 0 1em;
-}
-
 .about {
+  padding: 0 1em;
   margin-top: 3em;
 }
 
@@ -123,6 +120,20 @@ code {
   margin-top: 2.5em;
   border-top: 1px solid var(--light-grey);
   background-color: white;
+}
+
+.wrap-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tabs {
+  background-color: white;
+}
+
+.tab-panels {
+  padding: 0 1em;
 }
 
 .cell {
