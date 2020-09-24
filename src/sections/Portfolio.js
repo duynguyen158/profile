@@ -83,7 +83,7 @@ function Selector({ labels, value, onChange }) {
     );
 }
 
-// TODO: Remember where you scrolled
+// TODO: Remember where you scrolled. Disable video link on mobile.
 function TabPanel({ value, index, data }) {
     const Component = getComponent(data.label);
 

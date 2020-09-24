@@ -1,3 +1,4 @@
+/*---------FONTS---------*/
 @font-face {
   font-family: 'Kenfolg';
   src: url('fonts/MADE Kenfolg PERSONAL USE.woff') format('woff');
@@ -16,9 +17,8 @@
   font-style: normal;
 }
 
+/*---------VARIABLES---------*/
 :root {
-  /*--serif: "Newzald", "Georgia", "serif";*/
-  --serif: 'Belda', serif;
 	--base: 1.07rem;
 	--jumbo: 1.80225rem;
 	--h1: 1.602rem;
@@ -29,14 +29,10 @@
   --white: #f2e9e4;
   --black: #22223b;
   --light-grey: #e2e2e2;
-	/*--link: #1083cf;
-	--grey: #8c8c8c;
-	--light-blue: #eaf5ff;
-	--light-orange: #fff0e7;
-	--light-yellow: #fffff7;
-	--light-grey: #e2e2e2;*/
 }
 
+
+/*---------GLOBAL---------*/
 body {
   margin: 0;
   font-family: 'Argesta', serif;
@@ -58,8 +54,11 @@ h3 {
 
 code {
   font-family: Consolas, monospace;
+  font-size: 1rem;
 }
 
+
+/*---------HEADER---------*/
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/images/hero.jpeg");
   background-position: center;
@@ -86,6 +85,7 @@ code {
   text-decoration: none;
 }
 
+/*---------MAIN---------*/
 .markdown a:link {
   color: var(--black);
 }
@@ -111,31 +111,36 @@ code {
   margin: 0 auto;
 }
 
-.about {
-  padding: 0 1em;
-  margin-top: 3em;
-}
-
-.portfolio {
-  margin-top: 2.5em;
-  border-top: 1px solid var(--light-grey);
-  background-color: white;
-}
-
 .wrap-sticky {
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
+/*---------MAIN -> ABOUT---------*/
+.about {
+  padding: 0 1em;
+  margin-top: 3em;
+}
+
+/*---------MAIN -> PORTFOLIO---------*/
+.portfolio {
+  margin-top: 2.5em;
+  border-top: 1px solid var(--light-grey);
+  background-color: white;
+}
+
+/*---------MAIN -> PORTFOLIO -> TABS---------*/
 .tabs {
   background-color: white;
 }
 
+/*---------MAIN -> PORTFOLIO -> TAB PANELS---------*/
 .tab-panels {
   padding: 0 1em;
 }
 
+/*---------MAIN -> PORTFOLIO -> TAB PANELS -> CELLS---------*/
 .cell {
   margin-top: 2em;
 }
@@ -173,6 +178,7 @@ code {
   margin: 0;
 }
 
+/*---------FOOTER---------*/
 .footer {
   margin-top: 3em;
   padding: 2em 1em;
