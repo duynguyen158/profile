@@ -36,6 +36,7 @@ function Cell({ data }) {
     const image = (
         <img  
             src={thumbnailUrl} 
+            alt={title}
             width="100%"
             style={Object.assign(style, extraStyle)}
         />

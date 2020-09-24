@@ -35,6 +35,7 @@ function Cell({ data }) {
             loop={true} 
             muted={true} 
             src={thumbnailUrl} 
+            alt={title}
             width="100%"
             style={extraStyle}
         ></video>
