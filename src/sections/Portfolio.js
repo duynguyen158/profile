@@ -41,6 +41,9 @@ function Selector({ labels, value, onChange }) {
     const [ shadow, setShadow ] = useState(null);
 
     const ref = useRef(null);
+
+    // Fired once every time Selector is re-rendered, which happens as a result
+    // of changes in the variable "shadow."
     useEffect(() => {
         if (ref.current) {
             // Set box shadow of Tabs section based on its y-position, 

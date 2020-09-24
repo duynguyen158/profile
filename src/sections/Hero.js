@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 function Hero({ data }) {
     const [ height, setHeight ] = useState(window.innerHeight);
-    // As long as the list of dependencies included in useEffect() is empty, 
-    // declaring handleResize() outside of useEffect() is safe.
-    function handleResize() {
-        const newHeight = window.innerHeight;
-        if (newHeight !== height) {
-            setHeight(newHeight);
-        }
-    }
-    // NO dependency array so that it acts as both componentDidMount() and
-    // componentWillMount(), fired once every time Hero is re-rendered.
+
+    // Fired once every time Hero is re-rendered.
     useEffect(() => {
+        function handleResize() {
+            const newHeight = window.innerHeight;
+            if (newHeight !== height) {
+                setHeight(newHeight);
+            }
+        }
+
         window.addEventListener('resize', handleResize);
+
+        // Cleanup
         return () => {
             window.removeEventListener('resize', handleResize);
         };
