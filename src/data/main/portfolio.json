@@ -54,7 +54,7 @@
                     }
                 ],
                 "extraStyle" : {
-                    "borderRadius": "2px",
+                    "borderRadius": "3px",
                     "boxShadow": "0px 0px 4px 0px black" 
                 }
             },
