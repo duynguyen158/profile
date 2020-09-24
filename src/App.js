@@ -23,9 +23,7 @@ function App() {
                     <Text data={aboutData} classNames={['about-me']} />
                     <Text data={farewellData} classNames={['farewell']} />
                 </div>
-                <div className="portfolio">
-                    <Portfolio data={portfolioData} />
-                </div>
+                <Portfolio data={portfolioData} />
             </div>
             <div className="footer">
                 <Text data={footerData} />

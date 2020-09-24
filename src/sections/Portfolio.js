@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-//import Paper from '@material-ui/core/Paper'
+import React, { useState, useEffect, useRef } from 'react';
 import Visualizations from './Visualizations';
 import Articles from './Articles';
 import Tabs from '@material-ui/core/Tabs';
@@ -9,35 +8,82 @@ function Portfolio({ data }) {
     // Select first category by default
     const [ currentIndex, setIndex ] = useState(0);
 
+    // Handles selection between different categories, using index
     function handleChange(_, newIndex) {
         setIndex(newIndex);
     }
 
-    const tabs = data.map((d, i) => 
-        <Tab key={i} label={d.label} />
-    );
     const tabPanels = data.map((d, i) => 
         <TabPanel key={i} value={currentIndex} index={i} data={d} />
     );
 
     return (
-        //<Paper>
-        <div>
-            <div className="tabs wrap-sticky">
-                <Tabs value={currentIndex} onChange={handleChange} centered>
-                    {tabs}
-                </Tabs>
-            </div>
+        <div className="portfolio">
+            <Selector 
+                labels={data.map(d => d.label)} 
+                value={currentIndex} 
+                onChange={handleChange} 
+            />
             <div className="tab-panels">
                 {tabPanels}
             </div>
         </div>
-        //</Paper>
     );
 }
 
 export default Portfolio;
 
+function Selector({ labels, value, onChange }) {
+    const tabs = labels.map((d, i) => 
+        <Tab key={i} label={d} />
+    );
+    
+    const [ shadow, setShadow ] = useState(null);
+
+    const ref = useRef(null);
+    useEffect(() => {
+        if (ref.current) {
+            // Set box shadow of Tabs section based on its y-position, 
+            // i.e. depending on scrolling
+            function handleScroll() {
+                // Get the y-position. Since we're wrapping the Tabs section
+                // with the wrap-sticky class, where we set "position" to be "sticky", 
+                // and "top" to be 0, y will always be greater than or equal to 0. 
+                // (See: index.css.)
+                const y = ref.current.getBoundingClientRect().top;
+
+                if (y === 0) {
+                    // Tabs section is at the top of viewport
+                    setShadow('0 2px 4px rgba(0,0,0,.1)');
+                } else {
+                    // Tabs section is about to come to top of viewport
+                    setShadow(null);
+                }
+            };
+    
+            window.addEventListener('scroll', handleScroll);
+    
+            // Cleaning to prevent memory leak.
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    });
+
+    const style = {
+        boxShadow: shadow
+    }
+
+    return (
+        <div className="tabs wrap-sticky" ref={ref} style={style}>
+            <Tabs value={value} onChange={onChange} centered>
+                {tabs}
+            </Tabs>
+        </div>
+    );
+}
+
+// TODO: Remember where you scrolled
 function TabPanel({ value, index, data }) {
     const Component = getComponent(data.label);
 
