@@ -37,6 +37,7 @@ function Cell({ data }) {
                 __html: `
                     <video
                         autoplay
+                        playsinline
                         loop
                         muted
                         alt=${title}
