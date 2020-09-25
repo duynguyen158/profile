@@ -31,14 +31,13 @@ function Cell({ data }) {
 
     const style = {
         marginBottom: '1em',
-        borderRadius: '3px',
-        boxShadow: '0px 0px 4px 0px black' 
     };
     const image = (
         <img  
             src={thumbnailUrl} 
             alt={title}
             width="100%"
+            class="shadow"
             style={Object.assign(style, extraStyle)}
         />
     );

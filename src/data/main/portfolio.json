@@ -53,10 +53,7 @@
                         "text": "This was my first attempt at Mapbox, which I absolutely loved!"
                     }
                 ],
-                "extraStyle" : {
-                    "borderRadius": "3px",
-                    "boxShadow": "0px 0px 4px 0px black" 
-                }
+                "shadow": true
             },
             {
                 "id": "nys_coi",

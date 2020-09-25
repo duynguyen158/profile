@@ -21,7 +21,7 @@ function Cell({ data }) {
 
     const {
         id, title, date, publication, 
-        tech, byline, url, description, extraStyle
+        tech, byline, url, description, shadow
     } = data;
 
     // Fetch thumbnail video
@@ -29,16 +29,25 @@ function Cell({ data }) {
         setThumbnailUrl(video.default);
     });
 
+    // Will have to make do with dangerouslySetInnerHTML until React resolves the
+    // problem of muted not appearing after render
     const video = (
-        <video 
-            autoPlay={true} 
-            loop={true} 
-            muted={true} 
-            src={thumbnailUrl} 
-            alt={title}
-            width="100%"
-            style={extraStyle}
-        ></video>
+        <div class="DangerouslySetInnerHTML"
+            dangerouslySetInnerHTML={{
+                __html: `
+                    <video
+                        autoplay
+                        loop
+                        muted
+                        alt=${title}
+                        width="100%"
+                        class=${shadow ? 'shadow' : null}
+                        src=${thumbnailUrl}
+                    >
+                    <video/>
+                `
+            }}
+        />
     );
 
     return (
