@@ -3,7 +3,7 @@ import { utcParse } from 'd3-time-format';
 import Text from './Text';
 import linkWrap from './utilities/linkWrap';
 
-function Articles({ data }) {
+function Writings({ data }) {
     const examples = data.examples;
     const cells = examples.map((d, i) => <Cell key={i} data={d} />)
     return (
@@ -13,7 +13,7 @@ function Articles({ data }) {
     );
 } 
 
-export default Articles;
+export default Writings;
 
 function Cell({ data }) {
     // Hook to store and get URL of thumbnail

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Visualizations from './Visualizations';
-import Articles from './Articles';
+import Writings from './Writings';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
@@ -96,5 +96,5 @@ function TabPanel({ value, index, data }) {
 // ------------HELPERS-------------
 function getComponent(label) {
     if (label === 'Visualizations') return Visualizations;
-    return Articles;
+    return Writings;
 }
