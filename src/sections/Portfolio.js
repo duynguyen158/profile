@@ -39,11 +39,10 @@ function Selector({ labels, value, onChange }) {
     );
     
     const [ shadow, setShadow ] = useState(null);
-
     const ref = useRef(null);
 
     // Fired once every time Selector is re-rendered, which happens as a result
-    // of changes in the variable "shadow."
+    // of "shadow" changing from null to '0 2px 4px rgba(0,0,0,.1)', or vice versa.
     useEffect(() => {
         if (ref.current) {
             // Set box shadow of Tabs section based on its y-position, 
@@ -65,7 +64,7 @@ function Selector({ labels, value, onChange }) {
             };
     
             window.addEventListener('scroll', handleScroll);
-    
+
             // Cleaning to prevent memory leak.
             return () => {
                 window.removeEventListener('scroll', handleScroll);
@@ -73,10 +72,7 @@ function Selector({ labels, value, onChange }) {
         }
     });
 
-    const style = {
-        boxShadow: shadow
-    }
-
+    const style = { boxShadow: shadow };
     return (
         <div className="tabs wrap-sticky" ref={ref} style={style}>
             <Tabs value={value} onChange={onChange} centered>
