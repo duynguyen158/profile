@@ -21,7 +21,7 @@ function Cell({ data }) {
 
     const {
         id, title, date, publication, 
-        url, description, extraStyle
+        url, pdfUrl, description, extraStyle
     } = data;
 
     // Fetch thumbnail
@@ -37,7 +37,7 @@ function Cell({ data }) {
             src={thumbnailUrl} 
             alt={title}
             width="100%"
-            class="shadow"
+            className="shadow"
             style={Object.assign(style, extraStyle)}
         />
     );
@@ -48,7 +48,9 @@ function Cell({ data }) {
             <div className="info">
                 {linkWrap(<h3>{title}</h3>, url)}
                 <p className="publication">{publication}</p>
-                <small className="time">{toDateString(parseDate(date))}</small>
+                <small className="time">
+                    {toDateString(parseDate(date))} · {linkWrap('PDF', pdfUrl)}                
+                </small>
             </div>
             <Text data={description} classNames={['description']} />
         </div>

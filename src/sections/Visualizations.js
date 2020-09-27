@@ -32,7 +32,7 @@ function Cell({ data }) {
     // Will have to make do with dangerouslySetInnerHTML until React resolves the
     // problem of muted not appearing after render
     const video = (
-        <div class="DangerouslySetInnerHTML"
+        <div className="vid-wrapper"
             dangerouslySetInnerHTML={{
                 __html: `
                     <video
