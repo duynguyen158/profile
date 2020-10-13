@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d65f68bd4f58e96e3dd57a0fd547f94d",
+    "revision": "7759383b961f7e9b1eb0213b9d3d969b",
     "url": "/profile/index.html"
   },
   {
-    "revision": "3e62251c9edafb12c585",
+    "revision": "befaf725b16c6468b0d6",
     "url": "/profile/static/css/main.63caee6d.chunk.css"
   },
   {
-    "revision": "ccaa485d75dc774662e5",
-    "url": "/profile/static/js/10.b9ce6d39.chunk.js"
+    "revision": "2d93a8a47a6d78b958bc",
+    "url": "/profile/static/js/10.c9286af0.chunk.js"
   },
   {
-    "revision": "081b9f9ddff52372befd",
-    "url": "/profile/static/js/11.16208dfb.chunk.js"
+    "revision": "ffc6e58abf6b78fa5fe0",
+    "url": "/profile/static/js/11.9bfc1178.chunk.js"
   },
   {
-    "revision": "82d86005d766c116056b",
-    "url": "/profile/static/js/2.23a0f604.chunk.js"
+    "revision": "e8e277b16d7e12904f7c",
+    "url": "/profile/static/js/12.8c8f1206.chunk.js"
+  },
+  {
+    "revision": "f44224044abce4be94dd",
+    "url": "/profile/static/js/2.6d325e09.chunk.js"
   },
   {
     "revision": "301056a7ca16ead6156b38e6917dbb28",
-    "url": "/profile/static/js/2.23a0f604.chunk.js.LICENSE.txt"
+    "url": "/profile/static/js/2.6d325e09.chunk.js.LICENSE.txt"
   },
   {
     "revision": "b92d4e9d9fc06276a2f8",
@@ -48,16 +52,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/profile/static/js/8.420c7ee6.chunk.js"
   },
   {
-    "revision": "7b09e63e9a0613aa7b7a",
-    "url": "/profile/static/js/9.afd4fb45.chunk.js"
+    "revision": "e0694cd4df7bc0cedf08",
+    "url": "/profile/static/js/9.d254d55d.chunk.js"
   },
   {
-    "revision": "3e62251c9edafb12c585",
-    "url": "/profile/static/js/main.8f01f62d.chunk.js"
+    "revision": "befaf725b16c6468b0d6",
+    "url": "/profile/static/js/main.29726340.chunk.js"
   },
   {
-    "revision": "9a41c38f84756f228994",
-    "url": "/profile/static/js/runtime-main.d9886bcf.js"
+    "revision": "e4b5d43dbb308be91347",
+    "url": "/profile/static/js/runtime-main.d2cb4874.js"
   },
   {
     "revision": "2f9eff6b1c52dee923be6072225d7ab0",
@@ -106,6 +110,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7ea4cc3e5175a5ae7edbe4d939c2b21b",
     "url": "/profile/static/media/scotus.7ea4cc3e.mp4"
+  },
+  {
+    "revision": "7753c13ddbed6c2176871eed8375ffdd",
+    "url": "/profile/static/media/trump_covid.7753c13d.mp4"
   },
   {
     "revision": "c98a2461d5a07e840d49b908e09e6986",
