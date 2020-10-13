@@ -4,6 +4,24 @@
         "label": "Visualizations",
         "examples": [
             {
+                "id": "trump_covid",
+                "thumbnailType": "mp4",
+                "title": "The Trump COVID Hotspot",
+                "date": "10/13/20",
+                "publication": "Observable",
+                "tech": "🕹 D3.js, Axios.js",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/the-trump-covid-hotspot",
+                "description": [
+                    {
+                        "text": "[The New York Times's](https://www.nytimes.com/interactive/2020/10/02/us/politics/trump-contact-tracing-covid.html) timeline of events Donald Trump had participated the week before he tested postive for COVID-19, on a force-directed graph."
+                    },
+                    {
+                        "text": "The Times didn't include a formal dataset for this story, so I resorted to web scraping. After requesting the HTML file via Axios, I used `d3.select` instead of Cheerio, my go-to scraping library, to obtain the lists of people and meetings, since I was going to use D3 to create the graph anyway. Worked like a charm!"
+                    }
+                ]
+            },
+            {
                 "id": "covid_us_trajectory",
                 "thumbnailType": "mp4",
                 "title": "ProPublica's COVID Arrow Map",
