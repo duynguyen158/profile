@@ -84,7 +84,7 @@
                 "url": "https://observablehq.com/@duynguyen1678/nyc-li-2015-child-opportunity-index/2",
                 "description": [
                     {
-                        "text": "A bubble-flow chart tracking the distribution of child-opportunity scores across census tracts in New York City and Long Island."
+                        "text": "A beeswarm plot tracking the distribution of child-opportunity scores across census tracts in New York City and Long Island."
                     },
                     {
                         "text": "The [Child Opportunity Index](http://diversitydatakids.org/) measures conditions crucial to child development in the U.S. For this visualization, I used its 2015 scores."
