@@ -40,12 +40,11 @@ function Cell({ data }) {
                         playsinline
                         loop
                         muted
-                        alt=${title}
+                        alt="${title}"
                         width="100%"
-                        class=${shadow ? 'shadow' : null}
-                        src=${thumbnailUrl}
-                    >
-                    <video/>
+                        ${shadow ? 'class="shadow"' : ''}
+                        src="${thumbnailUrl}"
+                    />
                 `
             }}
         />
