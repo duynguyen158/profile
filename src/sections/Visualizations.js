@@ -43,7 +43,7 @@ function Cell({ data }) {
                         alt="${title}"
                         width="100%"
                         ${shadow ? 'class="shadow"' : ''}
-                        src="${thumbnailUrl}"
+                        src=${thumbnailUrl}
                     />
                 `
             }}
