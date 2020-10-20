@@ -4,6 +4,24 @@
         "label": "Visualizations",
         "examples": [
             {
+                "id": "wheel_of_progress",
+                "thumbnailType": "mp4",
+                "title": "The Woman Citizen's Wheel of Progress, 1917",
+                "date": "10/20/20",
+                "publication": "Observable",
+                "tech": "🕹 D3.js",
+                "byline": "💪 Responsible for everything",
+                "url": "https://observablehq.com/@duynguyen1678/the-trump-covid-hotspot",
+                "description": [
+                    {
+                        "text": "I recreated a 1917 radial map that shows U.S. states' support for legislation of interest to women's suffrage organizations. Good visualizations are truly timeless!"
+                    },
+                    {
+                        "text": "This chart and its later versions were printed in *The Woman Citizen*, an American weekly periodical, as well as flyers in the years leading to the 1920 ratification of the 19th Amendment. You can find the original on the [Claremont Colleges Digital Library's](https://ccdl.claremont.edu/digital/collection/p15831coll5/id/616) website."
+                    }
+                ]
+            },
+            {
                 "id": "trump_covid",
                 "thumbnailType": "mp4",
                 "title": "The Trump COVID Hotspot",
