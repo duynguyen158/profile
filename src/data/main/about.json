@@ -5,11 +5,11 @@
     },
     {
         "id": "who",
-        "text": "I'm an aspiring graphics reporter, news-apps developer and data-viz enthusiast from Hanoi, Vietnam, currently in senior year at New York University, where I study data science and journalism.\n\nI recently finished an internship at CoinDesk, where I spent three months creating graphics and helping engineers integrate D3 into their CMS. Before that, I was automating audience dashboards with for Malcolm Gladwell's podcast company, Pushkin Industries, as an analytics intern. Nowadays, I'm [introducing D3](https://observablehq.com/@duynguyen1678/xin-chao-d3-js) to Vietnamese journalists and volunteering for the COVID Tracking Project."
+        "text": "I'm an aspiring graphics reporter, news-apps developer and data-viz enthusiast from Hanoi, Vietnam, currently in senior year at New York University, where I study data science and journalism.\n\nI recently finished an internship at CoinDesk, where I spent three months creating graphics and helping engineers integrate D3 into their CMS. Before that, I was automating audience dashboards with for Malcolm Gladwell's podcast company, Pushkin Industries, as an analytics intern. Nowadays, I'm [introducing D3](https://observablehq.com/@duynguyen1678/xin-chao-d3-js) to Vietnamese journalists and volunteering in both data entry and [front-end development](https://covidtracking.com/about-data/visualization-guide) for the COVID Tracking Project."
     },
     {
         "id": "pastime",
-        "text": "When I'm not working, I like to fiddle with visualization concepts on [Observable](https://observablehq.com/@duynguyen1678) or via React. Otherwise, you can always find me outdoors. Riding a CitiBike along the Hudson, Bill Evans in my ears. Annihilating fries at Shake Shack. Or, if I'm in Hanoi, embarassing my high-school [teammates](https://urbanisthanoi.com/hanoi-culture/16559-field-of-dreams-the-history-and-future-of-baseball-in-vietnam) with my subpar performance as a shortstop."
+        "text": "When I'm not working, I like to fiddle with visualization concepts on Observable or via React. Otherwise, you can always find me outdoors. Riding a CitiBike along the Hudson, Bill Evans in my ears. Annihilating fries at Shake Shack. Or, if I'm in Hanoi, embarassing my high-school [teammates](https://urbanisthanoi.com/hanoi-culture/16559-field-of-dreams-the-history-and-future-of-baseball-in-vietnam) with my subpar performance as a shortstop."
     },
     {
         "id": "goal",
