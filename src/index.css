@@ -86,12 +86,13 @@ code {
 }
 
 /*---------MAIN---------*/
-.markdown a:link {
+.markdown a {
   color: var(--black);
 }
 
-.markdown a:visited {
-  color: #666e8f;
+.markdown a:hover {
+  transition: color 0.15s;
+  color: #1083cf;
 }
 
 .main {
