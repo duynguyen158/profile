@@ -3,11 +3,13 @@ import React, { useState, useEffect } from 'react';
 function Hero({ data }) {
     const [ height, setHeight ] = useState(window.innerHeight);
 
-    // Fired once every time Hero is re-rendered.
+    // Fired once every time Hero is re-rendered
     useEffect(() => {
         function handleResize() {
             const newHeight = window.innerHeight;
-            if (newHeight !== height) {
+
+            // Only resize if the change is substantial
+            if (Math.abs(newHeight - height) > 80) {
                 setHeight(newHeight);
             }
         }
