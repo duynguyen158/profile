@@ -1,54 +1,28 @@
-import React, { useState } from 'react';
-import { utcParse } from 'd3-time-format';
-import Text from './Text';
-import linkWrap from './utilities/linkWrap';
+import React, { useState } from "react";
+import { utcParse } from "d3-time-format";
+import Text from "./Text";
+import linkWrap from "./utilities/linkWrap";
 
 function Visualizations({ data }) {
     const examples = data.examples;
-    const cells = examples.map((d, i)=> <Cell key={i} data={d} />);
-    return (
-        <div className="wrap-wide">
-            {cells}
-        </div>
-    );
-} 
+    const cells = examples.map((d, i) => <Cell key={i} data={d} />);
+    return <div className="wrap-wide">{cells}</div>;
+}
 
 export default Visualizations;
 
 function Cell({ data }) {
-    // Hook to store and get URL of thumbnail
-    const [ thumbnailUrl, setThumbnailUrl ] = useState(null);
-
     const {
-        id, title, date, publication, 
-        tech, byline, url, description, shadow
+        id,
+        title,
+        date,
+        publication,
+        tech,
+        byline,
+        url,
+        description,
+        shadow,
     } = data;
-
-    // Fetch thumbnail video
-    import(`../media/videos/${id}.mp4`).then(video => {
-        setThumbnailUrl(video.default);
-    });
-
-    // Will have to make do with dangerouslySetInnerHTML until React resolves the
-    // problem of muted not appearing after render
-    const video = (
-        <div className="vid-wrapper"
-            dangerouslySetInnerHTML={{
-                __html: `
-                    <video
-                        autoplay
-                        playsinline
-                        loop
-                        muted
-                        alt="${title}"
-                        width="100%"
-                        ${shadow ? 'class="shadow"' : ''}
-                        src=${thumbnailUrl}
-                    />
-                `
-            }}
-        />
-    );
 
     return (
         <div id={id} className="cell">
@@ -62,20 +36,54 @@ function Cell({ data }) {
                     <small className="byline">{byline}</small>
                 </div>
             </div>
-            <Text data={description} classNames={['description']} />
-            {linkWrap(video, url)}
+            <Text data={description} classNames={["description"]} />
+            {linkWrap(<Video id={id} title={title} shadow={shadow}/>, url)}
         </div>
     );
-};
+}
+
+function Video({ id, title, shadow }) {
+    // Hook to store and get URL of thumbnail
+    const [thumbnailUrl, setThumbnailUrl] = useState(null);
+
+    // Fetch thumbnail video
+    import(`../media/videos/${id}.mp4`).then((video) => {
+        setThumbnailUrl(video.default);
+    });
+
+    // Will have to make do with dangerouslySetInnerHTML until React resolves the problem
+    // of muted not appearing after render: https://github.com/facebook/react/issues/10389
+    const video = thumbnailUrl ? (
+        <div
+            className="vid-wrapper"
+            dangerouslySetInnerHTML={{
+                __html: `
+                        <video
+                            autoplay
+                            playsinline
+                            loop
+                            muted
+                            alt="${title}"
+                            width="100%"
+                            ${shadow ? 'class="shadow"' : ""}
+                            src=${thumbnailUrl}
+                        />
+                    `,
+            }}
+        />
+    ) : null;
+
+    return video;
+}
 
 // ------------HELPERS-------------
-const parseDate = utcParse('%m/%d/%y');
+const parseDate = utcParse("%m/%d/%y");
 
 function toDateString(date) {
     return date.toLocaleString(undefined, {
         year: "numeric",
         month: "short",
         day: "numeric",
-        timeZone: 'UTC'
-    })
+        timeZone: "UTC",
+    });
 }
