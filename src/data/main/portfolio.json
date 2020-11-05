@@ -8,14 +8,14 @@
                 "thumbnailType": "jpg",
                 "title": "Experiments in Spatial Interpolation",
                 "caption": {
-                    "text": "For the news nerds: given the gridded dataset of resolution 0.75° × 0.75° (1), I sampled 4,000 random points in the bounded 2D region using [Poisson-disc sampling](https://www.jasondavies.com/poisson-disc/), applied IDW on said sample using the input points to predict the sample's PM 2.5 readings, then used `d3.tricontour` to create a smooth surface from the sample predictions (4). I'll use this same procedure for every interpolation technique. To produce a polygon that enclose each input (2) or sampled (3) point, I used `d3.geoVoronoi` (here's a [tutorial](https://observablehq.com/@fil/d3-geo-voronoi-and-gridded-data)). *What would happen if I applied `tricontour` directly on the input values?*"
+                    "text": "For the news nerds: given the gridded dataset of resolution 0.75° × 0.75° (1, 2), I sampled 4,000 random points in the bounded 2D region using [Poisson-disc sampling](https://www.jasondavies.com/poisson-disc/), applied IDW on said sample using the input points to predict the sample's PM 2.5 readings, then used `d3.tricontour` to create a smooth surface from the sample predictions (4). I'll use this same procedure for every interpolation technique. To produce a polygon that enclose each input (2) or sampled (3) point, I used `d3.geoVoronoi` (here's a [tutorial](https://observablehq.com/@fil/d3-geo-voronoi-and-gridded-data)). *What would happen if I applied `tricontour` directly on the input values?*"
                 },
                 "date": "Coming soon",
                 "publication": "Observable",
                 "tech": "🕹 D3.js",
                 "description": [
                     {
-                        "text": "Remember The New York Times's brilliant [map of particulate pollution](https://www.nytimes.com/interactive/2019/12/02/climate/air-pollution-compare-ar-ul.html) in 2019? One thing I wish I could do with it is to zoom in on Vietnam. Which is easy. What's complicated is how to smoothen the pixels that get bigger when zoomed in."
+                        "text": "Remember The New York Times's [global map of particulate pollution](https://www.nytimes.com/interactive/2019/12/02/climate/air-pollution-compare-ar-ul.html) in 2019? One thing I wish I could do is to zoom in on Vietnam. That itself is easy. What's complicated is smoothening the pixel-looking polygons that only get bigger and uglier as you zoom."
                     },
                     {
                         "text": "Historical geospatial research have shown [various ways](http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Interpolation.php) to do this, and I'll be testing all of them. What you're seeing is the process of interpolating via [*inverse-distance weighing*](https://dl.acm.org/doi/10.1145/800186.810616), applied to a snapshot of particulate matter (PM 2.5) concentration at 4 AM on November 12, 2019, a time when pollution in Hanoi [reached its peak](https://e.vnexpress.net/news/life/trend/hanoi-burning-its-way-to-pollution-4033434.html)."
