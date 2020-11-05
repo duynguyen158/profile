@@ -12,7 +12,7 @@
                 },
                 "date": "🚧 🏗 Coming soon 🏗 🚧",
                 "publication": "Observable",
-                "tech": "🕹 D3.js",
+                "tech": "🕹 D3.js, NetCDF.js",
                 "description": [
                     {
                         "text": "Remember The New York Times's [global map of particulate pollution](https://www.nytimes.com/interactive/2019/12/02/climate/air-pollution-compare-ar-ul.html) in 2019? One thing I wish I could do is to zoom in on Vietnam. That itself is easy. What's complicated is smoothening the pixel-looking polygons that only get bigger and uglier as you zoom."
@@ -21,7 +21,7 @@
                         "text": "Historical geospatial research have shown [various ways](http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Interpolation.php) to do this, and I'll be testing all of them. What you're seeing is the process of interpolating via [*inverse-distance weighing*](https://dl.acm.org/doi/10.1145/800186.810616), applied to a snapshot of particulate matter (PM 2.5) concentration at 4 AM on November 12, 2019, a time when pollution in Hanoi [reached its peak](https://e.vnexpress.net/news/life/trend/hanoi-burning-its-way-to-pollution-4033434.html)."
                     },
                     {
-                        "text": "The data are sourced from [forecasts](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-reanalysis-eac4) by the ECMWF Copernicus Atmosphere Monitoring Service, which is also used in the Times article."
+                        "text": "I requested the data via Python API calls from [forecast results](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-reanalysis-eac4) by the ECMWF Copernicus Atmosphere Monitoring Service, also the source in the Times article."
                     }
                 ]
             },
