@@ -4,6 +4,28 @@
         "label": "Visualizations",
         "examples": [
             {
+                "id": "spatial_interpolation",
+                "thumbnailType": "jpg",
+                "title": "Experiments in Spatial Interpolation",
+                "caption": {
+                    "text": "For the news nerds: given the gridded dataset of resolution 0.75° × 0.75° (1), I sampled 4,000 random points in the bounded 2D region using [Poisson-disc sampling](https://www.jasondavies.com/poisson-disc/), applied IDW on said sample using the input points to predict the sample's PM 2.5 readings, then used `d3.tricontour` to create a smooth surface from the sample predictions (4). I'll use this same procedure for every interpolation technique. To produce a polygon that enclose each input (2) or sampled (3) point, I used `d3.geoVoronoi` (here's a [tutorial](https://observablehq.com/@fil/d3-geo-voronoi-and-gridded-data)). *What would happen if I applied `tricontour` directly on the input values?*"
+                },
+                "date": "Coming soon",
+                "publication": "Observable",
+                "tech": "🕹 D3.js",
+                "description": [
+                    {
+                        "text": "Remember The New York Times's brilliant [map of particulate pollution](https://www.nytimes.com/interactive/2019/12/02/climate/air-pollution-compare-ar-ul.html) in 2019? One thing I wish I could do with it is to zoom in on Vietnam. Which is easy. What's complicated is how to smoothen the pixels that get bigger when zoomed in."
+                    },
+                    {
+                        "text": "Historical geospatial research have shown [various ways](http://www.bisolutions.us/A-Brief-Introduction-to-Spatial-Interpolation.php) to do this, and I'll be testing all of them. What you're seeing is the process of interpolating via [*inverse-distance weighing*](https://dl.acm.org/doi/10.1145/800186.810616), applied to a snapshot of particulate matter (PM 2.5) concentration at 4 AM on November 12, 2019, a time when pollution in Hanoi [reached its peak](https://e.vnexpress.net/news/life/trend/hanoi-burning-its-way-to-pollution-4033434.html)."
+                    },
+                    {
+                        "text": "The data are sourced from [forecasts](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-reanalysis-eac4) by the ECMWF Copernicus Atmosphere Monitoring Service, which is also used in the Times article."
+                    }
+                ]
+            },
+            {
                 "id": "wheel_of_progress",
                 "thumbnailType": "mp4",
                 "title": "The Woman Citizen's Wheel of Progress, 1917",
@@ -17,7 +39,7 @@
                         "text": "I recreated a 1917 radial map that shows U.S. states' support for legislation of interest to women's suffrage organizations. Good visualizations are truly timeless!"
                     },
                     {
-                        "text": "This chart and its later versions were printed in *The Woman Citizen*, an American weekly periodical, as well as flyers in the years leading to the 1920 ratification of the 19th Amendment. You can find the original on the [Claremont Colleges Digital Library's](https://ccdl.claremont.edu/digital/collection/p15831coll5/id/616) website."
+                        "text": "This chart and its later versions were printed in *The Woman Citizen*, an American weekly periodical, as well as flyers in the years leading to the 1920 ratification of the 19th Amendment. You can find the original on the [Claremont Colleges Digital Library's website](https://ccdl.claremont.edu/digital/collection/p15831coll5/id/616)."
                     }
                 ]
             },
@@ -32,7 +54,7 @@
                 "url": "https://observablehq.com/@duynguyen1678/the-trump-covid-hotspot",
                 "description": [
                     {
-                        "text": "[The New York Times's](https://www.nytimes.com/interactive/2020/10/02/us/politics/trump-contact-tracing-covid.html) timeline of events Donald Trump had participated in the week before he tested postive for COVID-19, on a force-directed graph."
+                        "text": "The New York Times's [timeline of events](https://www.nytimes.com/interactive/2020/10/02/us/politics/trump-contact-tracing-covid.html) Donald Trump had participated in the week before he tested postive for COVID-19, on a force-directed graph."
                     },
                     {
                         "text": "The Times didn't include a formal dataset for this story, so I resorted to web scraping. After requesting the HTML file via Axios, I used `d3.select` instead of Cheerio, my go-to scraping library, to obtain the lists of people and meetings, since I was going to use D3 to create the graph anyway. Worked like a charm!"
@@ -50,7 +72,7 @@
                 "url": "https://observablehq.com/@duynguyen1678/propublicas-covid-arrow-map",
                 "description": [
                     {
-                        "text": "[ProPublica's](https://projects.propublica.org/reopening-america/) map of COVID-19 trajectory across U.S. states, recreated."
+                        "text": "ProPublica's [cartogram of COVID-19 trajectory](https://projects.propublica.org/reopening-america/) across U.S. states, recreated."
                     },
                     {
                         "text": "To calculate the trend line in each state, I applied linear regression on daily numbers of positive tests per 100,000 people, smoothened into seven-day moving averages, for the past 14 days."
@@ -83,7 +105,7 @@
                 "url": "https://observablehq.com/@duynguyen1678/fatal-police-shootings-in-the-u-s",
                 "description": [
                     {
-                        "text": "An animated version of [The Washington Post's](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/#js-map) map of all fatal shootings by on-duty police officers from Jan. 1, 2015. Orange flashes indicate new shootings each day."
+                        "text": "An animated version of The Washington Post's [map of all fatal shootings](https://www.washingtonpost.com/graphics/investigations/police-shootings-database/#js-map) by on-duty police officers from Jan. 1, 2015. Orange flashes indicate new shootings each day."
                     },
                     {
                         "text": "This was my first attempt at Mapbox, which I absolutely loved!"
