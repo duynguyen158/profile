@@ -15,6 +15,8 @@ function Cell({ data }) {
     const {
         id,
         title,
+        thumbnailType,
+        caption,
         date,
         publication,
         tech,
@@ -24,40 +26,68 @@ function Cell({ data }) {
         shadow,
     } = data;
 
+    const head = <h3>{title}</h3>;
+    const thumbnail = (
+        <Media id={id} title={title} type={thumbnailType} shadow={shadow} />
+    );
+
     return (
         <div id={id} className="cell">
             <div className="info">
-                {linkWrap(<h3>{title}</h3>, url)}
+                {url ? linkWrap(head, url) : head}
                 <p className="publication">{publication}</p>
-                <small className="time">{toDateString(parseDate(date))}</small>
-                <div className="credits">
-                    <small className="tech">{tech}</small>
-                    <br></br>
-                    <small className="byline">{byline}</small>
-                </div>
+                <small className="time">
+                    {date !== "Coming soon"
+                        ? toDateString(parseDate(date))
+                        : date}
+                </small>
+                {byline ? (
+                    <div className="credits">
+                        <small className="tech">{tech}</small>
+                        <br></br>
+                        <small className="byline">{byline}</small>
+                    </div>
+                ) : (
+                    <div className="credits">
+                        <small className="tech">{tech}</small>
+                    </div>
+                )}
             </div>
             <Text data={description} classNames={["description"]} />
-            {linkWrap(<Video id={id} title={title} shadow={shadow}/>, url)}
+            {caption ? (
+                <div className="thumbnail">
+                    {url ? linkWrap(thumbnail, url) : thumbnail}
+                    <Text data={[caption]} classNames={["caption"]} />
+                </div>
+            ) : (
+                <div className="thumbnail">
+                    {url ? linkWrap(thumbnail, url) : thumbnail}
+                </div>
+            )}
         </div>
     );
 }
 
-function Video({ id, title, shadow }) {
+function Media({ id, title, type, shadow }) {
     // Hook to store and get URL of thumbnail
-    const [thumbnailUrl, setThumbnailUrl] = useState(null);
+    const [mediaUrl, setMediaUrl] = useState(null);
+
+    const folder = type === "mp4" ? "videos" : "images";
 
     // Fetch thumbnail video
-    import(`../media/videos/${id}.mp4`).then((video) => {
-        setThumbnailUrl(video.default);
+    import(`../media/${folder}/${id}.${type}`).then((media) => {
+        setMediaUrl(media.default);
     });
 
-    // Will have to make do with dangerouslySetInnerHTML until React resolves the problem
-    // of muted not appearing after render: https://github.com/facebook/react/issues/10389
-    const video = thumbnailUrl ? (
-        <div
-            className="vid-wrapper"
-            dangerouslySetInnerHTML={{
-                __html: `
+    let media;
+    if (type === "mp4") {
+        // Will have to make do with dangerouslySetInnerHTML until React resolves the problem
+        // of muted not appearing after render: https://github.com/facebook/react/issues/10389
+        media = mediaUrl ? (
+            <div
+                className="vid-wrapper"
+                dangerouslySetInnerHTML={{
+                    __html: `
                         <video
                             autoplay
                             playsinline
@@ -66,14 +96,26 @@ function Video({ id, title, shadow }) {
                             alt="${title}"
                             width="100%"
                             ${shadow ? 'class="shadow"' : ""}
-                            src=${thumbnailUrl}
+                            src=${mediaUrl}
                         />
                     `,
-            }}
-        />
-    ) : null;
+                }}
+            />
+        ) : null;
+    } else {
+        media = (
+            <img
+                src={mediaUrl}
+                alt={title}
+                width="100%"
+                className={shadow ? "shadow" : null}
+            />
+        );
+    }
 
-    return video;
+    //console.log(`${id} rendered`);
+
+    return media;
 }
 
 // ------------HELPERS-------------
