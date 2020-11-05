@@ -24,7 +24,8 @@
 	--h1: 1.602rem;
 	--h2: 1.424rem;
 	--h3: 1.266rem;
-	--h4: 1.125rem;
+  --h4: 1.125rem;
+  --caption: 0.8em;
   --small: 0.889em;
   --white: #f2e9e4;
   --black: #22223b;
@@ -183,6 +184,15 @@ code {
 
 .credits * {
   margin: 0;
+}
+
+.caption {
+  text-align: center;
+  font-size: var(--caption);
+}
+
+.caption code {
+  font-size: var(--small);
 }
 
 /*---------FOOTER---------*/
