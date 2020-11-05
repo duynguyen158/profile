@@ -37,7 +37,7 @@ function Cell({ data }) {
                 {url ? linkWrap(head, url) : head}
                 <p className="publication">{publication}</p>
                 <small className="time">
-                    {date !== "Coming soon"
+                    {!date.includes("Coming soon")
                         ? toDateString(parseDate(date))
                         : date}
                 </small>

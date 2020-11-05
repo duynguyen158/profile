@@ -10,7 +10,7 @@
                 "caption": {
                     "text": "For the news nerds: given the gridded dataset of resolution 0.75° × 0.75° (1, 2), I sampled 4,000 random points in the bounded 2D region using [Poisson-disc sampling](https://www.jasondavies.com/poisson-disc/), applied IDW on said sample using the input points to predict the sample's PM 2.5 readings, then used `d3.tricontour` to create a smooth surface from the sample predictions (4). I'll use this same procedure for every interpolation technique. To produce a polygon that enclose each input (2) or sampled (3) point, I used `d3.geoVoronoi` (here's a [tutorial](https://observablehq.com/@fil/d3-geo-voronoi-and-gridded-data)). *What would happen if I applied `tricontour` directly on the input values?*"
                 },
-                "date": "Coming soon",
+                "date": "🚧 🏗 Coming soon 🏗 🚧",
                 "publication": "Observable",
                 "tech": "🕹 D3.js",
                 "description": [
