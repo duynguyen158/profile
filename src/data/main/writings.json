@@ -1,34 +1,83 @@
 {
     "id": "clips",
     "label": "Writings",
-    "examples": [
-        {
-            "id": "uh-minimalist",
-            "title": "The Pink, Minimalist Aesthetic Enticing Hanoi's Millennials",
-            "date": "4/4/19",
-            "publication": "Urbanist Hanoi",
-            "url": "https://urbanisthanoi.com/hanoi-culture/14866-the-pink,-minimalist-aesthetic-enticing-hanoi-s-millennials",
-            "pdfUrl": "https://drive.google.com/file/d/1rRprABh-UeOQtvgLLygYhqM6X7aEBaDX/view?usp=sharing",
-            "description": [
-                {
-                    "id": "sublede",
-                    "text": "At the intersection between Hang Bong and Phung Hung streets, there is a bakery whose lavender armchairs look as if they are made from giant ladyfingers. It’s called Baked by Julie and, since opening last August, has constantly appeared on Instagram thanks to its predominantly pink palette, which is featured on its velour, mitten-shaped armchairs, ceramic teapots and garlanded entrance."
-                }
-            ]
-        },
-        {
-            "id": "uh-sneakers",
-            "title": "For Vietnam's Millennials, Sneakers Reflect American Ideals, Self-Expression and Nostalgia",
-            "date": "9/11/18",
-            "publication": "Urbanist Hanoi",
-            "url": "https://urbanisthanoi.com/hanoi-culture/13662-for-vietnam-s-millennials,-sneakers-reflect-american-ideals,-self-expression-and-nostalgia",
-            "pdfUrl": "https://drive.google.com/file/d/1oaONyNFiKQumMDWj5QZGPJL6KWQggGQ0/view?usp=sharing",
-            "description": [
-                {
-                    "id": "sublede",
-                    "text": "My memories of sneakers date back to when I was halfway through 7th grade, when a pair of Chuck Taylor All Star 70’s was given to me by my parents to commemorate my good end-of-semester results. The shoes felt awkward, but the sensation of having the same sneakers that the cool kids were wearing was comparable to ecstasy."
-                }
-            ]
-        }
-    ]
+    "examples": {
+        "published": [
+            {
+                "id": "uh-minimalist",
+                "title": "The Pink, Minimalist Aesthetic Enticing Hanoi's Millennials",
+                "date": "4/4/19",
+                "publication": "Urbanist Hanoi",
+                "url": "https://urbanisthanoi.com/hanoi-culture/14866-the-pink,-minimalist-aesthetic-enticing-hanoi-s-millennials",
+                "pdfUrl": "https://drive.google.com/file/d/1rRprABh-UeOQtvgLLygYhqM6X7aEBaDX/view?usp=sharing",
+                "description": [
+                    {
+                        "id": "sublede",
+                        "text": "At the intersection between Hang Bong and Phung Hung streets, there is a bakery whose lavender armchairs look as if they are made from giant ladyfingers. It’s called Baked by Julie and, since opening last August, has constantly appeared on Instagram thanks to its predominantly pink palette, which is featured on its velour, mitten-shaped armchairs, ceramic teapots and garlanded entrance."
+                    }
+                ]
+            },
+            {
+                "id": "uh-sneakers",
+                "title": "For Vietnam's Millennials, Sneakers Reflect American Ideals, Self-Expression and Nostalgia",
+                "date": "9/11/18",
+                "publication": "Urbanist Hanoi",
+                "url": "https://urbanisthanoi.com/hanoi-culture/13662-for-vietnam-s-millennials,-sneakers-reflect-american-ideals,-self-expression-and-nostalgia",
+                "pdfUrl": "https://drive.google.com/file/d/1oaONyNFiKQumMDWj5QZGPJL6KWQggGQ0/view?usp=sharing",
+                "description": [
+                    {
+                        "id": "sublede",
+                        "text": "My memories of sneakers date back to when I was halfway through 7th grade, when a pair of Chuck Taylor All Star 70’s was given to me by my parents to commemorate my good end-of-semester results. The shoes felt awkward, but the sensation of having the same sneakers that the cool kids were wearing was comparable to ecstasy."
+                    }
+                ]
+            }
+        ],
+        "unpublished": [
+            {
+                "title": "Quantitative Forecasters Gave Clinton a Near-Total Chance of Victory in 2016. Are They Changing Tactics This Time?",
+                "date": "4/30/20",
+                "url": "https://drive.google.com/file/d/1rK5dpmmHYgXnDhYVc8xuG5AK20FPbvC0/view"
+            },
+            {
+                "title": "What Could Bloomberg Have Done Differently?",
+                "date": "3/4/20",
+                "url": "https://drive.google.com/file/d/1Ltj3n5_e_6ic0S9tWfYXK8CpXlOhWZeL/view"
+            },
+            {
+                "title": "'It Got out of Control': Bloomberg Struggles on Women and Race in First Debate",
+                "date": "2/20/20",
+                "url": "https://drive.google.com/file/d/1732YNXwdZmUC8utxvpFB7EoJ6FEUBJ95/view"
+            },
+            {
+                "title": "Bloomberg Picks Up Pace, Leaving Buttigieg Behind in National Polls",
+                "date": "2/12/20",
+                "url": "https://drive.google.com/file/d/1gtU9b7oRcA4Hl_Ks-A0BtT_rYmWMINuM/view"
+            },
+            {
+                "title": "Despite Rise in Student Demand, College Counseling Centers Are Woefully Understaffed",
+                "date": "12/13/19",
+                "url": "https://drive.google.com/file/d/1wjV7K7xsU2egpKTNKItxPDt-Sz4BYDAi/view"
+            },
+            {
+                "title": "Despite Growth in Digital Jobs, Newsrooms Are Bleeding Employees",
+                "date": "12/12/19",
+                "url": "https://drive.google.com/file/d/10o06hYuxpF_iN6kn3AR1yD10tC9rqAGF/view"
+            },
+            {
+                "title": "Is Trick-or-Treating in New York City Any Different?",
+                "date": "11/8/19",
+                "url": "https://drive.google.com/file/d/1wZpJ9ms42NfNr32pobLv8mCQOJYc_Vcu/view"
+            },
+            {
+                "title": "Should New York City Have Its Own Safe Injection Site?",
+                "date": "10/8/19",
+                "url": "https://drive.google.com/file/d/1_VW9G7ATQWToRNG4U5q8ZZESGSigxep2/view"
+            },
+            {
+                "title": "Discover the Park That Was the World’s Largest Landfill",
+                "date": "9/18/19",
+                "url": "https://drive.google.com/file/d/1Juyb7UYmFijalmEC8Hh-QMIyHui3gpC4/view"
+            }
+        ]
+    }
 }

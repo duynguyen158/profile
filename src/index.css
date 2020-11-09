@@ -41,7 +41,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h3 {
+h1, h3, h4 {
   font-family: 'Kenfolg', serif;
 }
 
@@ -49,7 +49,7 @@ h1 {
   font-weight: 600;
 }
 
-h3 {
+h3, h4 {
   font-weight: 400;
 }
 
@@ -186,6 +186,8 @@ code {
   margin: 0;
 }
 
+/*---------MAIN -> PORTFOLIO -> TAB PANELS -> CELLS -> VISUALIZATIONS---------*/
+
 .caption {
   text-align: center;
   font-size: var(--caption);
@@ -193,6 +195,21 @@ code {
 
 .caption code {
   font-size: var(--small);
+}
+
+/*---------MAIN -> PORTFOLIO -> TAB PANELS -> CELLS -> WRITINGS---------*/
+
+.unpublished {
+  margin-top: 2em;
+  border-top: 1px solid var(--light-grey);
+}
+
+.unpublished li:not(:last-child) {
+  padding-bottom: 0.8em;
+}
+
+.unpublished a {
+  text-decoration: none;
 }
 
 /*---------FOOTER---------*/

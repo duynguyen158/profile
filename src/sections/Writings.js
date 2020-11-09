@@ -4,9 +4,27 @@ import Text from "./Text";
 import linkWrap from "./utilities/linkWrap";
 
 function Writings({ data }) {
-    const examples = data.examples;
-    const cells = examples.map((d, i) => <Cell key={i} data={d} />);
-    return <div className="wrap">{cells}</div>;
+    const published = data.examples.published;
+    const cells = published.map((d, i) => <Cell key={i} data={d} />);
+
+    const unpublished = data.examples.unpublished.map(
+        ({ title, date, url }) => (
+            <li>
+                <text className="markdown">{linkWrap(title, url)}</text>{" "}
+                <time>({toDateString(parseDate(date))})</time>
+            </li>
+        )
+    );
+
+    return (
+        <div className="wrap">
+            <div className="published">{cells}</div>
+            <div className="unpublished">
+                <h4>Unpublished clips</h4>
+                <ul>{unpublished}</ul>
+            </div>
+        </div>
+    );
 }
 
 export default Writings;
