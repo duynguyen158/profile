@@ -8,7 +8,9 @@ import aboutData from "./data/main/about.json";
 import farewellData from "./data/main/farewell.json";
 
 import Portfolio from "./sections/Portfolio";
-import portfolioData from "./data/main/portfolio.json";
+import visualizations from "./data/main/visualizations.json";
+import writings from "./data/main/writings.json";
+//import portfolioData from "./data/main/portfolio.json";
 
 import footerData from "./data/footer/footer.json";
 
@@ -23,7 +25,7 @@ function App() {
                     <Text data={aboutData} classNames={["about-me"]} />
                     <Text data={farewellData} classNames={["farewell"]} />
                 </div>
-                <Portfolio data={portfolioData} />
+                <Portfolio data={[visualizations, writings]} />
             </div>
             <div className="footer">
                 <Text data={footerData} />
