@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Hero({ data }) {
-    const [ height, setHeight ] = useState(window.innerHeight);
+    const [height, setHeight] = useState(window.innerHeight);
 
     // Fired once every time Hero is re-rendered
     useEffect(() => {
@@ -14,11 +14,11 @@ function Hero({ data }) {
             }
         }
 
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
 
         // Cleanup
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     });
     const style = { height };
@@ -36,10 +36,13 @@ export default Hero;
 
 function HeroText({ data }) {
     const email = <a href={"mailto:" + data.email}>Email</a>;
-    const links = Object
-        .entries(data.links)
-        .map((d, i) => <a key={i} href={d[1]} target="_blank" rel="noopener noreferrer">{d[0]}</a>)
-        .reduce((a, c) => [a, ' · ', c]);
+    const links = Object.entries(data.links)
+        .map((d, i) => (
+            <a key={i} href={d[1]} target="_blank" rel="noopener noreferrer">
+                {d[0]}
+            </a>
+        ))
+        .reduce((a, c) => [a, " · ", c]);
 
     return (
         <div className="hero-text">

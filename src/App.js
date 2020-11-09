@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import Hero from './sections/Hero'; 
-import heroData from './data/header/hero.json';
+import Hero from "./sections/Hero";
+import heroData from "./data/header/hero.json";
 
-import Text from './sections/Text';
-import aboutData from './data/main/about.json';
-import farewellData from './data/main/farewell.json';
+import Text from "./sections/Text";
+import aboutData from "./data/main/about.json";
+import farewellData from "./data/main/farewell.json";
 
-import Portfolio from './sections/Portfolio';
-import portfolioData from './data/main/portfolio.json';
+import Portfolio from "./sections/Portfolio";
+import portfolioData from "./data/main/portfolio.json";
 
-import footerData from './data/footer/footer.json';
+import footerData from "./data/footer/footer.json";
 
 function App() {
     return (
@@ -20,8 +20,8 @@ function App() {
             </div>
             <div className="main">
                 <div className="about wrap">
-                    <Text data={aboutData} classNames={['about-me']} />
-                    <Text data={farewellData} classNames={['farewell']} />
+                    <Text data={aboutData} classNames={["about-me"]} />
+                    <Text data={farewellData} classNames={["farewell"]} />
                 </div>
                 <Portfolio data={portfolioData} />
             </div>

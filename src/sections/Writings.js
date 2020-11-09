@@ -1,40 +1,42 @@
-import React, { useState } from 'react';
-import { utcParse } from 'd3-time-format';
-import Text from './Text';
-import linkWrap from './utilities/linkWrap';
+import React, { useState } from "react";
+import { utcParse } from "d3-time-format";
+import Text from "./Text";
+import linkWrap from "./utilities/linkWrap";
 
 function Writings({ data }) {
     const examples = data.examples;
-    const cells = examples.map((d, i) => <Cell key={i} data={d} />)
-    return (
-        <div className="wrap">
-            {cells}
-        </div>
-    );
-} 
+    const cells = examples.map((d, i) => <Cell key={i} data={d} />);
+    return <div className="wrap">{cells}</div>;
+}
 
 export default Writings;
 
 function Cell({ data }) {
     // Hook to store and get URL of thumbnail
-    const [ thumbnailUrl, setThumbnailUrl ] = useState(null);
+    const [thumbnailUrl, setThumbnailUrl] = useState(null);
 
     const {
-        id, title, date, publication, 
-        url, pdfUrl, description, extraStyle
+        id,
+        title,
+        date,
+        publication,
+        url,
+        pdfUrl,
+        description,
+        extraStyle,
     } = data;
 
     // Fetch thumbnail
-    import(`../media/images/${id}.jpg`).then(image => {
+    import(`../media/images/${id}.jpg`).then((image) => {
         setThumbnailUrl(image.default);
     });
 
     const style = {
-        marginBottom: '1em',
+        marginBottom: "1em",
     };
     const image = (
-        <img  
-            src={thumbnailUrl} 
+        <img
+            src={thumbnailUrl}
             alt={title}
             width="100%"
             className="shadow"
@@ -49,22 +51,22 @@ function Cell({ data }) {
                 {linkWrap(<h3>{title}</h3>, url)}
                 <p className="publication">{publication}</p>
                 <small className="time">
-                    {toDateString(parseDate(date))} · {linkWrap('PDF', pdfUrl)}                
+                    {toDateString(parseDate(date))} · {linkWrap("PDF", pdfUrl)}
                 </small>
             </div>
-            <Text data={description} classNames={['description']} />
+            <Text data={description} classNames={["description"]} />
         </div>
     );
 }
 
 // ------------HELPERS-------------
-const parseDate = utcParse('%m/%d/%y');
+const parseDate = utcParse("%m/%d/%y");
 
 function toDateString(date) {
     return date.toLocaleString(undefined, {
         year: "numeric",
         month: "short",
         day: "numeric",
-        timeZone: 'UTC'
-    })
+        timeZone: "UTC",
+    });
 }
