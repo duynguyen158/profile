@@ -1,32 +1,30 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Visualizations from './Visualizations';
-import Writings from './Writings';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import React, { useState, useEffect, useRef } from "react";
+import Visualizations from "./Visualizations";
+import Writings from "./Writings";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 
 function Portfolio({ data }) {
     // Select first category by default
-    const [ currentIndex, setIndex ] = useState(0);
+    const [currentIndex, setIndex] = useState(0);
 
     // Handles selection between different categories, using index
     function handleChange(_, newIndex) {
         setIndex(newIndex);
     }
 
-    const tabPanels = data.map((d, i) => 
+    const tabPanels = data.map((d, i) => (
         <TabPanel key={i} value={currentIndex} index={i} data={d} />
-    );
+    ));
 
     return (
         <div className="portfolio">
-            <Selector 
-                labels={data.map(d => d.label)} 
-                value={currentIndex} 
-                onChange={handleChange} 
+            <Selector
+                labels={data.map((d) => d.label)}
+                value={currentIndex}
+                onChange={handleChange}
             />
-            <div className="tab-panels">
-                {tabPanels}
-            </div>
+            <div className="tab-panels">{tabPanels}</div>
         </div>
     );
 }
@@ -34,40 +32,38 @@ function Portfolio({ data }) {
 export default Portfolio;
 
 function Selector({ labels, value, onChange }) {
-    const tabs = labels.map((d, i) => 
-        <Tab key={i} label={d} />
-    );
-    
-    const [ shadow, setShadow ] = useState(null);
+    const tabs = labels.map((d, i) => <Tab key={i} label={d} />);
+
+    const [shadow, setShadow] = useState(null);
     const ref = useRef(null);
 
     // Fired once every time Selector is re-rendered, which happens as a result
     // of "shadow" changing from null to '0 2px 4px rgba(0,0,0,.1)', or vice versa.
     useEffect(() => {
         if (ref.current) {
-            // Set box shadow of Tabs section based on its y-position, 
+            // Set box shadow of Tabs section based on its y-position,
             // i.e. depending on scrolling
             function handleScroll() {
                 // Get the y-position. Since we're wrapping the Tabs section
-                // with the wrap-sticky class, where we set "position" to be "sticky", 
-                // and "top" to be 0, y will always be greater than or equal to 0. 
+                // with the wrap-sticky class, where we set "position" to be "sticky",
+                // and "top" to be 0, y will always be greater than or equal to 0.
                 // (See: index.css.)
                 const y = ref.current.getBoundingClientRect().top;
 
                 if (y === 0) {
                     // Tabs section is at the top of viewport
-                    setShadow('0 1px 6px 0 rgba(0,0,0,0.2)');
+                    setShadow("0 1px 6px 0 rgba(0,0,0,0.2)");
                 } else {
                     // Tabs section is about to come to top of viewport
                     setShadow(null);
                 }
-            };
-    
-            window.addEventListener('scroll', handleScroll);
+            }
+
+            window.addEventListener("scroll", handleScroll);
 
             // Cleaning to prevent memory leak.
             return () => {
-                window.removeEventListener('scroll', handleScroll);
+                window.removeEventListener("scroll", handleScroll);
             };
         }
     });
@@ -88,13 +84,13 @@ function TabPanel({ value, index, data }) {
 
     return (
         <div hidden={value !== index}>
-            <Component data={data}/>
+            {value === index && <Component data={data} />}
         </div>
     );
 }
 
 // ------------HELPERS-------------
 function getComponent(label) {
-    if (label === 'Visualizations') return Visualizations;
+    if (label === "Visualizations") return Visualizations;
     return Writings;
 }
