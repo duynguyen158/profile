@@ -1,0 +1,1 @@
+{"version":3,"sources":["media/videos/wapo_police_shootings.mp4"],"names":["module","exports"],"mappings":"4HAAAA,EAAOC,QAAU,IAA0B","file":"static/js/13.91414cc9.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/wapo_police_shootings.91161adc.mp4\";"],"sourceRoot":""}

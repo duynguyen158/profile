@@ -1,1 +1,0 @@
-{"version":3,"sources":["media/videos/scotus.mp4"],"names":["module","exports"],"mappings":"4HAAAA,EAAOC,QAAU,IAA0B","file":"static/js/11.2bf0fe77.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/scotus.7ea4cc3e.mp4\";"],"sourceRoot":""}
