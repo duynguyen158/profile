@@ -8,10 +8,10 @@ function Writings({ data }) {
     const cells = published.map((d, i) => <Cell key={i} data={d} />);
 
     const unpublished = data.examples.unpublished.map(
-        ({ title, date, url }) => (
-            <li>
-                <text className="markdown">{linkWrap(title, url)}</text>{" "}
-                <time>({toDateString(parseDate(date))})</time>
+        ({ title, date, url }, i) => (
+            <li key={i} className="markdown">
+                {linkWrap(title, url)}{" "}
+                (<time>{toDateString(parseDate(date))}</time>)
             </li>
         )
     );
