@@ -57,7 +57,6 @@ function Cell({ data }) {
             src={thumbnailUrl}
             alt={title}
             width="100%"
-            className="shadow"
             style={Object.assign(style, extraStyle)}
         />
     );
