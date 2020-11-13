@@ -4,6 +4,20 @@
     "examples": {
         "published": [
             {
+                "id": "cd-venezuela",
+                "title": "Venezuela’s Bitcoin Story Puts It in a Category of One",
+                "date": "11/12/20",
+                "publication": "CoinDesk",
+                "url": "https://www.coindesk.com/bitcoin-adoption-venezuela-research",
+                "pdfUrl": "https://drive.google.com/file/d/1rId-xm00vn-_WWoWCjHejQA5DwFOOIsr/view?usp=sharing",
+                "description": [
+                    {
+                        "id": "sublede",
+                        "text": "Venezuela is an example of cryptocurrency adoption during an economic crisis. No other economy facing hyperinflation has come near the South American nation in terms of GDP-adjusted activity on peer-to-peer crypto exchanges, according to a new CoinDesk Research analysis of data from LocalBitcoins and Paxful, the two largest such exchanges."
+                    }
+                ]
+            },
+            {
                 "id": "uh-minimalist",
                 "title": "The Pink, Minimalist Aesthetic Enticing Hanoi's Millennials",
                 "date": "4/4/19",
