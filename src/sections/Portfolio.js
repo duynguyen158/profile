@@ -84,7 +84,7 @@ function TabPanel({ value, index, data }) {
 
     return (
         <div hidden={value !== index}>
-            {value === index && <Component data={data} />}
+            <Component data={data} />
         </div>
     );
 }
