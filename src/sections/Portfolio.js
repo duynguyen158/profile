@@ -52,7 +52,9 @@ function Selector({ labels, value, onChange }) {
 
                 if (y === 0) {
                     // Tabs section is at the top of viewport
-                    setShadow("0 1px 6px 0 rgba(0,0,0,0.2)");
+                    if (!shadow) {
+                        setShadow("0 1px 6px 0 rgba(0,0,0,0.2)");
+                    }
                 } else {
                     // Tabs section is about to come to top of viewport
                     setShadow(null);
