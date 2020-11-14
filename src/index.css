@@ -133,14 +133,13 @@ code {
   background-color: white;
 }
 
-.shadow {
-  border-radius: 3px;
-  box-shadow: 0 0 5px 0 black;
-}
-
 /*---------MAIN -> PORTFOLIO -> TABS---------*/
 .tabs {
   background-color: white;
+}
+
+.shadow {
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,0.2);
 }
 
 /*---------MAIN -> PORTFOLIO -> TAB PANELS---------*/
@@ -184,6 +183,11 @@ code {
 
 .credits * {
   margin: 0;
+}
+
+.cell .shadow {
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 black;
 }
 
 /*---------MAIN -> PORTFOLIO -> TAB PANELS -> CELLS -> VISUALIZATIONS---------*/

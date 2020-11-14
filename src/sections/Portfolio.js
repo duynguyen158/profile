@@ -34,7 +34,7 @@ export default Portfolio;
 function Selector({ labels, value, onChange }) {
     const tabs = labels.map((d, i) => <Tab key={i} label={d} />);
 
-    const [shadow, setShadow] = useState(null);
+    const [shadow, setShadow] = useState(false);
     const ref = useRef(null);
 
     // Fired once every time Selector is re-rendered, which happens as a result
@@ -52,12 +52,10 @@ function Selector({ labels, value, onChange }) {
 
                 if (y === 0) {
                     // Tabs section is at the top of viewport
-                    if (!shadow) {
-                        setShadow("0 1px 6px 0 rgba(0,0,0,0.2)");
-                    }
+                    if (!shadow) setShadow(true);
                 } else {
                     // Tabs section is about to come to top of viewport
-                    setShadow(null);
+                    setShadow(false);
                 }
             }
 
@@ -70,9 +68,8 @@ function Selector({ labels, value, onChange }) {
         }
     });
 
-    const style = { boxShadow: shadow };
     return (
-        <div className="tabs wrap-sticky" ref={ref} style={style}>
+        <div className={`tabs wrap-sticky${shadow ? " shadow" : ""}`} ref={ref}>
             <Tabs value={value} onChange={onChange} centered>
                 {tabs}
             </Tabs>
