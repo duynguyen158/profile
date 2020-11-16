@@ -60,13 +60,11 @@ function Selector({ labels, value, onChange }) {
             }
         }
 
-        const debouncedHandleScroll = debounce(handleScroll, 20);
-
-        window.addEventListener("scroll", debouncedHandleScroll);
+        window.addEventListener("scroll", handleScroll);
 
         // Cleaning to prevent memory leak.
         return () => {
-            window.removeEventListener("scroll", debouncedHandleScroll);
+            window.removeEventListener("scroll", handleScroll);
         };
     });
 
@@ -94,16 +92,4 @@ function TabPanel({ value, index, data }) {
 function getComponent(label) {
     if (label === "Visualizations") return Visualizations;
     return Writings;
-}
-
-// Debouncing handles scroll performance issue
-function debounce(func, duration) {
-    let timer;
-    return () => {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            timer = null;
-            func.apply(this, arguments);
-        }, duration);
-    };
 }

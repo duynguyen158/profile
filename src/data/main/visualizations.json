@@ -11,7 +11,7 @@
             },
             "date": "🚧 🏗 Coming soon 🏗 🚧",
             "publication": "Observable",
-            "tech": "🕹 D3.js, NetCDF.js",
+            "tech": "🕹 D3, NetCDF.js",
             "description": [
                 {
                     "text": "Remember The New York Times's [global map of particulate pollution](https://www.nytimes.com/interactive/2019/12/02/climate/air-pollution-compare-ar-ul.html) in 2019? One thing I wish I could do is to zoom in on Vietnam. That itself is easy. What's complicated is smoothening the pixel-looking polygons that only get bigger and uglier as you zoom."
@@ -21,6 +21,24 @@
                 },
                 {
                     "text": "I requested the data via Python API calls from [forecast results](https://ads.atmosphere.copernicus.eu/cdsapp#!/dataset/cams-global-reanalysis-eac4) by the ECMWF Copernicus Atmosphere Monitoring Service, also the source in the Times article."
+                }
+            ]
+        },
+        {
+            "id": "covid_us_path",
+            "thumbnailType": "jpg",
+            "title": "U.S. COVID-19 Trajectory Multiples",
+            "date": "11/16/20",
+            "publication": "Observable",
+            "tech": "🕹 D3, Geometric.js",
+            "byline": "💪 Responsible for everything",
+            "url": "https://observablehq.com/@duynguyen1678/u-s-covid-19-trajectory-multiples",
+            "description": [
+                {
+                    "text": "Concatenating the arrows in my [recreation](https://observablehq.com/@duynguyen1678/propublicas-covid-arrow-map) of ProPublica's arrow cartogram leads to line paths that convey the overall trend of new cases per capita in the U.S."
+                },
+                {
+                    "text": "I placed the time labels next to said paths using [Voronoi diagrams](https://observablehq.com/@harrystevens/directly-labelling-lines)."
                 }
             ]
         },
@@ -48,7 +66,7 @@
             "title": "The Trump COVID Hotspot",
             "date": "10/13/20",
             "publication": "Observable",
-            "tech": "🕹 D3.js, Axios.js",
+            "tech": "🕹 D3, Axios.js",
             "byline": "💪 Responsible for everything",
             "url": "https://observablehq.com/@duynguyen1678/the-trump-covid-hotspot",
             "description": [
@@ -66,7 +84,7 @@
             "title": "ProPublica's COVID Arrow Map",
             "date": "8/3/20",
             "publication": "Observable",
-            "tech": "🕹 D3.js, SimpleStatistics.js",
+            "tech": "🕹 D3, SimpleStatistics.js",
             "byline": "💪 Responsible for everything",
             "url": "https://observablehq.com/@duynguyen1678/propublicas-covid-arrow-map",
             "description": [
@@ -99,7 +117,7 @@
             "title": "Fatal Police Shootings in the U.S.",
             "date": "6/3/20",
             "publication": "Observable",
-            "tech": "🕹 D3.js, MapboxGL.js",
+            "tech": "🕹 D3, MapboxGL.js",
             "byline": "💪 Responsible for everything",
             "url": "https://observablehq.com/@duynguyen1678/fatal-police-shootings-in-the-u-s",
             "description": [
