@@ -1,0 +1,1 @@
+{"version":3,"sources":["media/images/covid_us_path.jpg"],"names":["module","exports"],"mappings":"0HAAAA,EAAOC,QAAU,IAA0B","file":"static/js/1.2567fca1.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/covid_us_path.7328bf30.jpg\";"],"sourceRoot":""}
