@@ -3,4 +3,4 @@
 </script>
 
 <Intro />
-<p>This is your first push into both GitHub and a local server.</p>
+<p>This is your first push-and-deploy on a local server.</p>
