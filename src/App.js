@@ -20,7 +20,7 @@ function App() {
             <div className="header">
                 <Hero data={heroData} />
             </div>
-            <div className="main">
+            {/* <div className="main">
                 <div className="about wrap">
                     <Text data={aboutData} classNames={["about-me"]} />
                     <Text data={farewellData} classNames={["farewell"]} />
@@ -29,7 +29,7 @@ function App() {
             </div>
             <div className="footer">
                 <Text data={footerData} />
-            </div>
+            </div> */}
         </div>
     );
 }
