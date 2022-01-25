@@ -1,5 +1,7 @@
 <!-- SCRIPT -->
 <script>
+	// Imports
+	import Typewriter from "@components/Typewriter.svelte";
 </script>
 
 <!-- MARKUP -->
@@ -9,19 +11,15 @@
 		rel="stylesheet"
 	/>
 	<title>Duy Nguyen's Personal Site</title>
-	<style>
-		body {
-			margin: 0;
-		}
-	</style>
 </svelte:head>
 
 <div id="app">
-	<article>
+	<article id="terminal">
 		<header class="intro">
 			<p>
-				Duy Nguyen is a data journalist & news apps developer with a background
-				in statistics & machine learning.
+				<Typewriter
+					text="Duy Nguyen is a data journalist & newsroom engineer with a background in machine learning."
+				/>
 			</p>
 		</header>
 	</article>
@@ -31,12 +29,18 @@
 <style lang="scss">
 	@import "../base";
 
-	div#app {
-		margin: 0 20px;
+	:global(body) {
+		margin: 0;
+		background-color: $black;
+	}
+
+	#terminal {
+		padding: 2em 2em;
 	}
 
 	p {
 		font-family: $mono;
 		max-width: 600px;
+		color: $white;
 	}
 </style>
