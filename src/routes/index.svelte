@@ -14,11 +14,11 @@
 		await wait(250);
 		prompt = `
 			<p>
-				What would you like to know 
+				Type or click an option
 				(<span class="click" data-click="email"
 				>Email</span>/<span class="click" data-click="resume"
 				>Résumé</span>/<span class="click" data-click="github"
-				>GitHub</span>)?
+				>GitHub</span>)
 			</p>`;
 	}
 </script>
@@ -56,7 +56,7 @@
 	}
 
 	#terminal {
-		padding: 2em 2em;
+		padding: 4em 2em 0 2em;
 		font-family: $mono;
 		max-width: 600px;
 		color: $white;
@@ -67,7 +67,7 @@
 		}
 
 		:global(span.click) {
-			text-decoration: underline;
+			font-weight: 700;
 			cursor: pointer;
 		}
 	}
