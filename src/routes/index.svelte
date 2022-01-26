@@ -2,6 +2,25 @@
 <script>
 	// Imports
 	import Typewriter from "@components/Typewriter.svelte";
+
+	// Variables
+	let prompt = "";
+
+	// Methods
+	const wait = (ms) => new Promise((_) => setTimeout(_, ms));
+	// const delay = () => wait(Math.random() * 40 + 80);
+
+	async function createPrompt() {
+		await wait(250);
+		prompt = `
+			<p>
+				What would you like to know 
+				(<span class="click" data-click="email"
+				>Email</span>/<span class="click" data-click="resume"
+				>Résumé</span>/<span class="click" data-click="github"
+				>GitHub</span>)?
+			</p>`;
+	}
 </script>
 
 <!-- MARKUP -->
@@ -19,8 +38,10 @@
 			<p>
 				<Typewriter
 					text="Duy Nguyen is a data journalist & newsroom engineer with a background in machine learning."
+					on:done={createPrompt}
 				/>
 			</p>
+			{@html prompt}
 		</header>
 	</article>
 </div>
@@ -36,11 +57,18 @@
 
 	#terminal {
 		padding: 2em 2em;
-	}
-
-	p {
 		font-family: $mono;
 		max-width: 600px;
 		color: $white;
+
+		p {
+			margin: 0;
+			margin-bottom: 1em;
+		}
+
+		:global(span.click) {
+			text-decoration: underline;
+			cursor: pointer;
+		}
 	}
 </style>

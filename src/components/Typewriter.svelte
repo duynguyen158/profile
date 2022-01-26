@@ -12,6 +12,7 @@
 		function loop() {
 			if (written === text) {
 				dispatch("done");
+				finished = true;
 				return;
 			}
 
@@ -26,11 +27,12 @@
 
 	// Variables
 	let written = "";
+	let finished = false;
 	const dispatch = createEventDispatcher();
 </script>
 
 <!-- MARKUP -->
-<span>{written}</span>
+<span class:finished>{written}</span>
 
 <!-- STYLES -->
 <style lang="scss">
@@ -46,7 +48,7 @@
 	}
 
 	span {
-		&::after {
+		&:not(.finished)::after {
 			content: "▌";
 			display: inline-block;
 			animation: phase 1.25s infinite;
